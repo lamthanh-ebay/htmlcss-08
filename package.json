@@ -1,0 +1,21 @@
+{
+    "name": "f8-project-08",
+    "version": "1.0.0",
+    "description": "",
+    "homepage": "https://github.com/lamthanh-ebay/htmlcss-08#readme",
+    "bugs": {
+        "url": "https://github.com/lamthanh-ebay/htmlcss-08/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lamthanh-ebay/htmlcss-08.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass sass:assets/css -w"
+    }
+}
