@@ -9,14 +9,21 @@ $grid-breakpoints: (
     xxl: 1400px,
 );
 
+// Mixin tạo Media Query để làm Responsive cho các thành phần:
 @mixin breakpoint($key) {
+    // $key là các infix nhé.
     $breakpoint: map.get($grid-breakpoints, $key);
 
-    @if ($breakpoint) {
+    // Bước kiểm tra $key:
+    @if ($breakpoint != null) {
+        // Truyền $key link tinh thì $breakpoint sẽ trả ra null
+        // nên nếu $breakpoint khác null => tức là truyền đúng Infix
+        // thì mới chạy vào Media Query.
         @media screen and (max-width: ($breakpoint - 0.02px)) {
             @content;
         }
     } @else {
-        @error "The value #{$key} is not in Grid Breakpoint";
+        // Nếu $key khác Infix thì văng ra lỗi này nhé.
+        @error "The value #{$key} is not in Grid Breakpoint (List)";
     }
 }
