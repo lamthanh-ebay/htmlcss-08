@@ -1,3 +1,4 @@
+@use "../abstracts";
 /******** Header ********/
 
 %flexItemCenter {
@@ -7,6 +8,14 @@
 
 .header {
     background-color: var(--header-bg-color);
+
+    @include abstracts.breakpoint(lg) {
+        background-color: red;
+    }
+
+    @include abstracts.breakpoint(md) {
+        background-color: green;
+    }
 }
 
 .top-bar {

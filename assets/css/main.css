@@ -1380,6 +1380,7 @@ html {
   --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
 }
 
+/********** Mixin **********/
 /******** Header ********/
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top-bar {
   display: flex;
@@ -1388,6 +1389,16 @@ html {
 
 .header {
   background-color: var(--header-bg-color);
+}
+@media screen and (max-width: 991.98px) {
+  .header {
+    background-color: red;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .header {
+    background-color: green;
+  }
 }
 
 .top-bar {
