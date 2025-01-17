@@ -1,10 +1,10 @@
 <div class="container">
     <div class="top-bar">
         <!-- Logo -->
-        <div class="logo">
-            <img src="./assets/img/logo-grocery-mart.svg" alt="Grocery Mart" class="logo" />
+        <a href="./" class="logo">
+            <img src="./assets/img/logo-grocery-mart.svg" alt="Grocery Mart" class="logo__img" />
             <p class="logo__title">grocerymart</p>
-        </div>
+        </a>
 
         <!-- Nav -->
         <nav class="navbar">
@@ -12,22 +12,47 @@
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Departments
-                        <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__link-icon" />
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__link-icon" />
                     </a>
                 </li>
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Grocery
-                        <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__link-icon" />
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__link-icon" />
                     </a>
                 </li>
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Beauty
-                        <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__link-icon" />
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="icon navbar__link-icon" />
                     </a>
                 </li>
             </ul>
         </nav>
+
+        <!-- Top bar Action -->
+        <div class="top-act">
+            <div class="top-act__group">
+                <button class="top-act__btn">
+                    <img src="./assets/icons/search.svg" alt="" class="icon top-act__icon" />
+                </button>
+            </div>
+            <div class="top-act__group top-act__group--dual">
+                <a href="#!" class="top-act__btn">
+                    <img src="./assets/icons/heart.svg" alt="" class="icon top-act__icon" />
+                    <span class="top-act__label">03</span>
+                </a>
+
+                <div class="top-act__separate"></div>
+
+                <a href="#!" class="top-act__btn">
+                    <img src="./assets/icons/buy.svg" alt="" class="icon top-act__icon" />
+                    <span class="top-act__label">$65.42</span>
+                </a>
+            </div>
+            <div class="top-act__user">
+                <img src="./assets/img/avartar-1.jpg" alt="" class="top-act__avatar" />
+            </div>
+        </div>
     </div>
 </div>
