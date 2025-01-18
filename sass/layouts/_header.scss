@@ -8,23 +8,40 @@
 
 .header {
     background-color: var(--header-bg-color);
-
-    @include abstracts.breakpoint(lg) {
-        background-color: red;
-    }
-
-    @include abstracts.breakpoint(md) {
-        background-color: green;
-    }
 }
 
 .top-bar {
     @extend %flexItemCenter;
     padding: 30px 0;
+
+    @include abstracts.breakpoint(lg) {
+        padding: 20px 0;
+    }
+
+    @include abstracts.breakpoint(md) {
+        position: relative;
+        padding: 16px 20px;
+    }
+
+    &__more {
+        display: none;
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
+        }
+    }
 }
 
 .navbar {
     margin-left: 144px;
+
+    @include abstracts.breakpoint(xl) {
+        margin-left: 54px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
 
     &__list {
         @extend %flexItemCenter;
@@ -59,7 +76,6 @@
 
     &__group {
         @extend %flexItemCenter;
-
         justify-content: center;
 
         border-radius: 8px;
@@ -67,8 +83,18 @@
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
 
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }
+
         &--dual > [class*="__btn"] {
             padding: 0 20px;
+        }
+
+        &--single {
+            @include abstracts.breakpoint(lg) {
+                display: none;
+            }
         }
     }
 
