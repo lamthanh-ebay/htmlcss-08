@@ -6,12 +6,19 @@ html {
         contrast(96%);
     --body-bg: #f6f6f6;
 
+    // Header
     --header-bg-color: #eee;
-    @include abstracts.breakpoint(lg) {
-        --header-bg-color: #fff;
-    }
+
     --top-act-group-bg-color: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-separate-bg-color: #ededf6;
     --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
+
+    // Dropdown
+    --dropdown-bg-color: #fff;
+    --dropdown-shadow: rgba(200, 200, 200, 0.4);
+
+    @include abstracts.breakpoint(lg) {
+        --header-bg-color: #fff;
+    }
 }

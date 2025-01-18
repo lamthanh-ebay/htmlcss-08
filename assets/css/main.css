@@ -1369,6 +1369,10 @@ html.dark {
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-separate-bg-color: #ededf6;
   --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
+  --dropdown-bg-color: #363c4a;
+  --dropdown-shadow: rgba(23, 28, 40, 0.4);
+  --dropdown-arrow-filter: brightness(0) saturate(100%) invert(21%) sepia(5%) saturate(1895%) hue-rotate(184deg)
+      brightness(96%) contrast(91%);
 }
 
 /********** Mixin **********/
@@ -1382,6 +1386,8 @@ html {
   --top-act-group-shadow: rgba(237, 237, 246, 0.2);
   --top-act-separate-bg-color: #ededf6;
   --top-act-avatar-shadow: rgba(0, 0, 0, 0.08);
+  --dropdown-bg-color: #fff;
+  --dropdown-shadow: rgba(200, 200, 200, 0.4);
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1400,6 +1406,7 @@ html {
 }
 
 .top-bar {
+  position: relative;
   padding: 30px 0;
 }
 @media screen and (max-width: 991.98px) {
@@ -1437,6 +1444,9 @@ html {
 }
 .navbar__list {
   margin: 0 -15px;
+}
+.navbar__item:hover .dropdown {
+  display: block;
 }
 .navbar__link {
   column-gap: 6px;
@@ -1544,6 +1554,28 @@ html {
   .logo__title {
     font-size: 1.8rem;
   }
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  padding-top: 54px;
+  display: none;
+}
+.dropdown__inner {
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--dropdown-bg-color);
+  box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
+}
+.dropdown__inner::before {
+  content: url(../icons/dropdown-arrow.svg);
+  position: absolute;
+  top: -13px;
+  left: var(--arrow-left-pos);
+  translate: -50%;
+  filter: var(--dropdown-arrow-filter);
 }
 
 /*# sourceMappingURL=main.css.map */
