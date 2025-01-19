@@ -30,19 +30,20 @@
 }
 
 .top-menu {
-    height: 100%;
+    max-height: inherit;
 
     &__main {
         width: 292px;
+        // max-height: inherit;
         max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top-menu-border-color);
     }
+}
 
-    &__column {
-        display: flex;
-        column-gap: 14px;
-        max-height: inherit;
-    }
+.menu-column {
+    display: flex;
+    column-gap: 14px;
+    max-height: inherit;
 
     &__icon {
         position: relative;
@@ -81,13 +82,11 @@
     }
 
     &__list {
-        height: 100%;
-        margin-top: 19px;
+        margin-top: 18px;
         overflow-y: auto;
     }
 
-    &__item:last-child .top-menu__link {
-        padding-bottom: 0;
+    &__item {
     }
 
     &__link {
