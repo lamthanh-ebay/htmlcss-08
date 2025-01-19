@@ -8,6 +8,9 @@
 
 .header {
     background-color: var(--header-bg-color);
+    @include abstracts.breakpoint(lg) {
+        box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+    }
 }
 
 .top-bar {
