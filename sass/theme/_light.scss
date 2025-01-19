@@ -18,6 +18,9 @@ html {
     --dropdown-bg-color: #fff;
     --dropdown-shadow: rgba(200, 200, 200, 0.4);
 
+    // Top menu
+    --top-menu-border-color: #d2d1d6;
+
     @include abstracts.breakpoint(lg) {
         --header-bg-color: #fff;
     }
