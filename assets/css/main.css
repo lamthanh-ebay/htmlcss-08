@@ -1572,11 +1572,14 @@ html {
   }
 }
 
+/****** Dropdown ******/
 .dropdown {
   position: absolute;
   left: 0;
   padding-top: 54px;
   width: 1240px;
+  max-width: 100%;
+  display: none;
 }
 .dropdown__inner {
   --inner-max-height: min(582px, 100vh - 158px);
@@ -1597,13 +1600,25 @@ html {
   filter: var(--dropdown-arrow-filter);
 }
 
+/****** Top Menu ******/
 .top-menu {
+  --menu-main-width: 292px;
+  position: relative;
   max-height: inherit;
 }
 .top-menu__main {
-  width: 292px;
+  width: var(--menu-main-width);
   max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
   border-right: 1px solid var(--top-menu-border-color);
+}
+.top-menu__sub-menu {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: calc(var(--inner-padding) * 2);
+  position: absolute;
+  inset: 0 0 0 var(--menu-main-width);
+  padding-left: var(--inner-padding);
+  overflow-y: auto;
 }
 
 .menu-column {
@@ -1611,11 +1626,19 @@ html {
   column-gap: 14px;
   max-height: inherit;
 }
+.menu-column + .menu-column {
+  margin-top: 18px;
+}
 .menu-column__icon {
   position: relative;
   width: 36px;
   height: 36px;
   flex-shrink: 0;
+}
+@media screen and (max-width: 1199.98px) {
+  .menu-column__icon {
+    display: none;
+  }
 }
 .menu-column__content {
   display: flex;
@@ -1625,7 +1648,7 @@ html {
 .menu-column__icon-1 {
   width: 30px;
   height: 30px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .menu-column__icon-2 {
   position: absolute;
@@ -1633,7 +1656,7 @@ html {
   bottom: 0;
   width: 24px;
   height: 24px;
-  object-fit: cover;
+  object-fit: contain;
   filter: var(--top-menu-icon-color);
 }
 .menu-column__heading {
@@ -1646,6 +1669,13 @@ html {
   margin-top: 18px;
   overflow-y: auto;
 }
+.menu-column__item--active .top-menu__sub-menu {
+  display: grid;
+}
+.menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
+  color: #0071dc;
+  text-shadow: 0.35px 0.35px #0071dc, -0.35px -0.35px #0071dc;
+}
 .menu-column__link {
   display: block;
   padding: 7px 0;
@@ -1653,10 +1683,6 @@ html {
   line-height: 142.857%;
   transition: text-shadow, color;
   transition-duration: 0.1s;
-}
-.menu-column__link:hover {
-  color: #0071dc;
-  text-shadow: 0.35px 0.35px #0071dc, -0.35px -0.35px #0071dc;
 }
 
 /*# sourceMappingURL=main.css.map */

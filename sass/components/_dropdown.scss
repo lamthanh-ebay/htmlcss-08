@@ -1,10 +1,13 @@
+@use "../abstracts";
+/****** Dropdown ******/
 .dropdown {
     position: absolute;
     left: 0;
     padding-top: 54px;
     width: 1240px;
+    max-width: 100%;
 
-    // display: none;
+    display: none;
 
     &__inner {
         --inner-max-height: min(582px, 100vh - 158px);
@@ -29,14 +32,28 @@
     }
 }
 
+/****** Top Menu ******/
 .top-menu {
+    --menu-main-width: 292px;
+    position: relative;
     max-height: inherit;
 
     &__main {
-        width: 292px;
+        width: var(--menu-main-width);
         // max-height: inherit;
         max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top-menu-border-color);
+    }
+
+    &__sub-menu {
+        display: none;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: calc(var(--inner-padding) * 2);
+
+        position: absolute;
+        inset: 0 0 0 var(--menu-main-width);
+        padding-left: var(--inner-padding);
+        overflow-y: auto;
     }
 }
 
@@ -45,11 +62,19 @@
     column-gap: 14px;
     max-height: inherit;
 
+    & + & {
+        margin-top: 18px;
+    }
+
     &__icon {
         position: relative;
         width: 36px;
         height: 36px;
         flex-shrink: 0;
+
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
     }
 
     &__content {
@@ -61,7 +86,7 @@
     &__icon-1 {
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     &__icon-2 {
@@ -70,7 +95,7 @@
         bottom: 0;
         width: 24px;
         height: 24px;
-        object-fit: cover;
+        object-fit: contain;
         filter: var(--top-menu-icon-color);
     }
 
@@ -87,6 +112,15 @@
     }
 
     &__item {
+        &--active .top-menu__sub-menu {
+            display: grid;
+        }
+    }
+
+    &__item--active > &__link,
+    &__item:hover > &__link {
+        color: #0071dc;
+        text-shadow: 0.35px 0.35px #0071dc, -0.35px -0.35px #0071dc;
     }
 
     &__link {
@@ -96,10 +130,5 @@
         line-height: 142.857%;
         transition: text-shadow, color;
         transition-duration: 0.1s;
-
-        &:hover {
-            color: #0071dc;
-            text-shadow: 0.35px 0.35px #0071dc, -0.35px -0.35px #0071dc;
-        }
     }
 }
