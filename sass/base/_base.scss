@@ -21,15 +21,15 @@ a {
 }
 
 a,
+img,
 button,
 input,
 select,
-textarea,
-li {
+textarea {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    -webkit-tap-highlight-color: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button {
