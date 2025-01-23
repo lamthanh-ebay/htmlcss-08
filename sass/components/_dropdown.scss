@@ -9,6 +9,13 @@
 
     display: none;
 
+    @include abstracts.breakpoint(lg) {
+        display: block;
+        position: initial;
+        width: 100%;
+        padding-top: 0;
+    }
+
     &__inner {
         --inner-max-height: min(582px, 100vh - 158px);
         --inner-padding: 30px;
@@ -29,6 +36,20 @@
             translate: -50%;
             filter: var(--dropdown-arrow-filter);
         }
+
+        @include abstracts.breakpoint(lg) {
+            --inner-max-height: auto;
+
+            padding: 0 40px;
+            position: initial;
+            background: transparent;
+            box-shadow: initial;
+            border-radius: initial;
+
+            &::before {
+                content: none;
+            }
+        }
     }
 }
 
@@ -45,6 +66,10 @@
         // max-height: inherit;
         max-height: var(--max-height-inner-dropdown);
         border-right: 1px solid var(--top-menu-border-color);
+
+        @include abstracts.breakpoint(lg) {
+            border-right: none;
+        }
     }
 
     &__sub-menu {
@@ -56,6 +81,13 @@
         inset: 0 0 0 var(--menu-main-width);
         padding-left: var(--inner-padding);
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg) {
+            position: initial;
+            grid-template-columns: 1fr;
+            padding-left: 0;
+            margin-top: 10px;
+        }
 
         &--not-main {
             display: grid;
@@ -85,6 +117,10 @@
 
         @include abstracts.breakpoint(xl) {
             display: none;
+        }
+
+        @include abstracts.breakpoint(lg) {
+            display: block;
         }
     }
 
@@ -120,11 +156,20 @@
         &:hover {
             text-decoration: underline;
         }
+
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 16px;
+        }
     }
 
     &__list {
         margin-top: 12px;
         overflow-y: auto;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 0;
+            overflow-y: initial;
+        }
     }
 
     &__item {

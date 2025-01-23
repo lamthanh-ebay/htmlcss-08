@@ -1577,14 +1577,16 @@ html {
     flex-direction: column;
     align-items: flex-start;
     margin: 0 0;
+    height: 100vh;
+    overflow-y: auto;
   }
 }
 .navbar__item:hover .dropdown {
   display: block;
 }
 @media screen and (max-width: 991.98px) {
-  .navbar__item:hover .dropdown {
-    display: none;
+  .navbar__item {
+    width: 100%;
   }
 }
 .navbar__link {
@@ -1603,6 +1605,7 @@ html {
 @media screen and (max-width: 991.98px) {
   .navbar__link {
     padding: 0 40px;
+    justify-content: space-between;
   }
 }
 
@@ -1699,6 +1702,14 @@ html {
   max-width: 100%;
   display: none;
 }
+@media screen and (max-width: 991.98px) {
+  .dropdown {
+    display: block;
+    position: initial;
+    width: 100%;
+    padding-top: 0;
+  }
+}
 .dropdown__inner {
   --inner-max-height: min(582px, 100vh - 158px);
   --inner-padding: 30px;
@@ -1717,6 +1728,19 @@ html {
   translate: -50%;
   filter: var(--dropdown-arrow-filter);
 }
+@media screen and (max-width: 991.98px) {
+  .dropdown__inner {
+    --inner-max-height: auto;
+    padding: 0 40px;
+    position: initial;
+    background: transparent;
+    box-shadow: initial;
+    border-radius: initial;
+  }
+  .dropdown__inner::before {
+    content: none;
+  }
+}
 
 /****** Top Menu ******/
 .top-menu {
@@ -1730,6 +1754,11 @@ html {
   max-height: var(--max-height-inner-dropdown);
   border-right: 1px solid var(--top-menu-border-color);
 }
+@media screen and (max-width: 991.98px) {
+  .top-menu__main {
+    border-right: none;
+  }
+}
 .top-menu__sub-menu {
   display: none;
   grid-template-columns: repeat(3, 1fr);
@@ -1738,6 +1767,14 @@ html {
   inset: 0 0 0 var(--menu-main-width);
   padding-left: var(--inner-padding);
   overflow-y: auto;
+}
+@media screen and (max-width: 991.98px) {
+  .top-menu__sub-menu {
+    position: initial;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    margin-top: 10px;
+  }
 }
 .top-menu__sub-menu--not-main {
   display: grid;
@@ -1765,6 +1802,11 @@ html {
 @media screen and (max-width: 1199.98px) {
   .menu-column__icon {
     display: none;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .menu-column__icon {
+    display: block;
   }
 }
 .menu-column__content {
@@ -1796,9 +1838,20 @@ html {
 .menu-column__heading:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 991.98px) {
+  .menu-column__heading {
+    margin-bottom: 16px;
+  }
+}
 .menu-column__list {
   margin-top: 12px;
   overflow-y: auto;
+}
+@media screen and (max-width: 991.98px) {
+  .menu-column__list {
+    margin-top: 0;
+    overflow-y: initial;
+  }
 }
 .menu-column__item--active .top-menu__sub-menu {
   display: grid;

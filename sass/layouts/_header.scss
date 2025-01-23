@@ -92,6 +92,8 @@
             align-items: flex-start;
 
             margin: 0 0;
+            height: 100vh;
+            overflow-y: auto;
         }
     }
 
@@ -101,9 +103,7 @@
         }
 
         @include abstracts.breakpoint(lg) {
-            &:hover .dropdown {
-                display: none;
-            }
+            width: 100%;
         }
     }
 
@@ -126,6 +126,7 @@
 
         @include abstracts.breakpoint(lg) {
             padding: 0 40px;
+            justify-content: space-between;
         }
     }
 }
