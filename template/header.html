@@ -11,12 +11,25 @@
         </a>
 
         <!-- Nav -->
-        <nav id="navbar" class="navbar show">
+        <nav id="navbar" class="navbar hide">
             <!-- Navbar close -->
             <button class="navbar__close d-none d-lg-block js-toggle" toggle-target="#navbar">
-                <img src="./assets/icons/arrow-left.svg" alt="" class="navbar__close-icon" />
+                <img src="./assets/icons/arrow-left.svg" alt="" class="navbar__close-icon icon" />
             </button>
 
+            <!-- Navbar btn -->
+            <a href="#!" class="navbar-btn d-none d-md-flex">
+                <img src="./assets/icons/buy.svg" alt="" class="navbar-btn__icon icon" />
+                <span class="navbar-btn__title">Card</span>
+                <span class="navbar-btn__qnt">3</span>
+            </a>
+            <a href="#!" class="navbar-btn d-none d-md-flex">
+                <img src="./assets/icons/heart.svg" alt="" class="navbar-btn__icon icon" />
+                <span class="navbar-btn__title">Favorite</span>
+                <span class="navbar-btn__qnt">3</span>
+            </a>
+
+            <!-- Navbar list -->
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
