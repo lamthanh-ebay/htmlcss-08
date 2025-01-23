@@ -96,6 +96,10 @@
             inset: initial;
             padding-left: 0;
             max-height: var(--max-height-inner-dropdown);
+
+            @include abstracts.breakpoint(lg) {
+                grid-template-columns: 1fr;
+            }
         }
     }
 }

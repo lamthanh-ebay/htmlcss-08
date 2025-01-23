@@ -1784,6 +1784,11 @@ html {
   padding-left: 0;
   max-height: var(--max-height-inner-dropdown);
 }
+@media screen and (max-width: 991.98px) {
+  .top-menu__sub-menu--not-main {
+    grid-template-columns: 1fr;
+  }
+}
 
 .menu-column {
   display: flex;
