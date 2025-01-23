@@ -1580,6 +1580,11 @@ html {
     padding: 10px 40px;
   }
 }
+@media screen and (max-width: 575.98px) {
+  .navbar__close {
+    padding: 0 20px 10px;
+  }
+}
 .navbar__list {
   margin: 0 -15px;
 }
@@ -1590,11 +1595,12 @@ html {
     margin: 0 0;
     height: calc(100vh - 96px);
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }
 @media screen and (max-width: 767.98px) {
   .navbar__list {
-    height: calc(100vh - 192px);
+    height: calc(100vh - 240px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1623,6 +1629,12 @@ html {
   .navbar__link {
     padding: 0 40px;
     justify-content: space-between;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .navbar__link {
+    height: 44px;
+    padding: 0 20px;
   }
 }
 .navbar__link-icon {
@@ -1689,6 +1701,12 @@ html {
   height: 50px;
   align-items: center;
   padding: 0 40px;
+}
+@media screen and (max-width: 575.98px) {
+  .navbar-btn {
+    height: 44px;
+    padding: 0 20px;
+  }
 }
 .navbar-btn__title, .navbar-btn__qnt {
   font-size: 1.5rem;
@@ -1788,6 +1806,11 @@ html {
     content: none;
   }
 }
+@media screen and (max-width: 575.98px) {
+  .dropdown__inner {
+    padding: 0 20px;
+  }
+}
 
 /****** Top Menu ******/
 .top-menu {
@@ -1795,6 +1818,11 @@ html {
   --max-height-inner-dropdown: calc(var(--inner-max-height) - var(--inner-padding) * 2);
   position: relative;
   max-height: inherit;
+}
+@media screen and (max-width: 575.98px) {
+  .top-menu {
+    --menu-main-width: 100%;
+  }
 }
 .top-menu__main {
   width: var(--menu-main-width);
@@ -1910,7 +1938,12 @@ html {
 }
 .menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
   color: #0071dc;
-  text-shadow: 0.35px 0.35px #0071dc, -0.35px -0.35px #0071dc;
+  text-shadow: 0.35px 0.35px currentColor, -0.35px -0.35px currentColor;
+}
+@media screen and (max-width: 767.98px) {
+  .menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
+    text-shadow: 0.1px 0.1px currentColor, -0.1px -0.1px currentColor;
+  }
 }
 .menu-column__link {
   display: block;

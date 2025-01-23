@@ -49,6 +49,10 @@
                 content: none;
             }
         }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px;
+        }
     }
 }
 
@@ -59,6 +63,10 @@
 
     position: relative;
     max-height: inherit;
+
+    @include abstracts.breakpoint(sm) {
+        --menu-main-width: 100%;
+    }
 
     &__main {
         width: var(--menu-main-width);
@@ -184,7 +192,10 @@
     &__item--active > &__link,
     &__item:hover > &__link {
         color: #0071dc;
-        text-shadow: 0.35px 0.35px #0071dc, -0.35px -0.35px #0071dc;
+        text-shadow: 0.35px 0.35px currentColor, -0.35px -0.35px currentColor;
+        @include abstracts.breakpoint(md) {
+            text-shadow: 0.1px 0.1px currentColor, -0.1px -0.1px currentColor;
+        }
     }
 
     &__link {
