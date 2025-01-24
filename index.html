@@ -29,7 +29,34 @@
         </script>
 
         <!-- Main -->
-        <h1>Home Page</h1>
+        <main class="main-content">
+            <!-- Slideshow -->
+            <div class="slideshow">
+                <div class="container">
+                    <div class="slideshow__wrap">
+                        <!-- Slideshow inner -->
+                        <div class="slideshow__inner">
+                            <div class="slideshow__item">
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.98px)"
+                                        srcset="./assets/img/slideshow/slideshow-1-md.png"
+                                    />
+                                    <img src="./assets/img/slideshow/slideshow-1.png" alt="" class="slideshow__image" />
+                                </picture>
+                            </div>
+                        </div>
+
+                        <!-- Slideshow page -->
+                        <div class="slideshow__page">
+                            <span class="slideshow__num">1</span>
+                            <span class="slideshow__slider"></span>
+                            <span class="slideshow__num">5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
         <!-- Footer -->
         <footer id="footer"></footer>
         <script>
