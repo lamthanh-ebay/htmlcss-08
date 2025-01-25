@@ -3,7 +3,7 @@
 .slideshow {
     padding-top: 40px;
 
-    @include abstracts.breakpoint(md) {
+    @include abstracts.screen(md) {
         padding-top: 30px;
     }
 
@@ -24,7 +24,7 @@
         padding-top: 33.955%;
         flex-shrink: 0;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             padding-top: 49.552%;
         }
     }
@@ -57,7 +57,7 @@
         line-height: 144.444%;
         color: var(--color);
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             font-size: 1.4rem;
             line-height: 142.857%;
         }
@@ -70,7 +70,7 @@
         flex-shrink: 0;
         background-color: var(--color);
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             height: 3px;
         }
 
@@ -86,7 +86,7 @@
             border: 4px solid var(--color);
             border-radius: 50%;
 
-            @include abstracts.breakpoint(md) {
+            @include abstracts.screen(md) {
                 border-width: 3px;
             }
         }

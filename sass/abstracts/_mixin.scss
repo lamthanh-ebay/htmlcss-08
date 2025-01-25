@@ -10,7 +10,7 @@ $grid-breakpoints: (
 );
 
 // Mixin tạo Media Query để làm Responsive cho các thành phần:
-@mixin breakpoint($key) {
+@mixin screen($key) {
     // $key là các infix nhé.
     $breakpoint: map.get($grid-breakpoints, $key);
 
