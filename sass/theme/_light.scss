@@ -25,8 +25,20 @@ html {
     --sidebar-bg: #fff;
     --sidebar-shadow: rgba(200, 200, 200, 0.4);
 
+    // Category item
+    --category-item-bg: #eee;
+    --category-item-thumb-bg: #fff;
+    --category-item-title-color: #000;
+
+    //******** Responsive ********//
+    //Header
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
+    }
+
+    // Category item
+    @include abstracts.screen(md) {
+        --category-item-bg: #fff;
     }
 }

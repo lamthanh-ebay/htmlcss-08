@@ -8,10 +8,34 @@
             margin-top: 30px;
         }
     }
-}
 
-.category {
-    background-color: orange;
+    &__heading {
+        margin-bottom: 20px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 2.2rem;
+            line-height: 145.455%;
+        }
+    }
+
+    &__gutter-category-list {
+        --grid-gutter-x: 51px;
+
+        @include abstracts.screen(xxl) {
+            --grid-gutter-x: 40px;
+        }
+
+        @include abstracts.screen(xl) {
+            --grid-gutter-x: 30px;
+        }
+
+        @include abstracts.screen(md) {
+            --grid-gutter-y: 20px;
+        }
+    }
 }
 
 .product {
