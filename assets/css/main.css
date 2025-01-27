@@ -1960,14 +1960,6 @@ html {
 }
 
 .slideshow {
-  padding-top: 40px;
-}
-@media screen and (max-width: 767.98px) {
-  .slideshow {
-    padding-top: 30px;
-  }
-}
-.slideshow__wrap {
   position: relative;
 }
 .slideshow__inner {
@@ -2051,6 +2043,23 @@ html {
 .slideshow__slider::after {
   right: 0;
   transform: translateX(90%);
+}
+
+.home__container {
+  margin-top: 40px;
+}
+@media screen and (max-width: 767.98px) {
+  .home__container {
+    margin-top: 30px;
+  }
+}
+
+.category {
+  background-color: orange;
+}
+
+.product {
+  background-color: green;
 }
 
 /*# sourceMappingURL=main.css.map */

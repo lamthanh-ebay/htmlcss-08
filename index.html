@@ -28,14 +28,38 @@
             load("#header", "./template/header.html");
         </script>
 
-        <!-- Main -->
-        <main class="main-content">
-            <!-- Slideshow -->
-            <div class="slideshow">
+        <!-- Main - Home-->
+        <main class="main-content home">
+            <!-- Home container: 1 / Slideshow -->
+            <section class="home__container">
                 <div class="container">
-                    <div class="slideshow__wrap">
+                    <!-- Slideshow -->
+                    <div class="slideshow">
                         <!-- Slideshow inner -->
                         <div class="slideshow__inner">
+                            <!-- Slideshow 1 -->
+                            <div class="slideshow__item">
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.98px)"
+                                        srcset="./assets/img/slideshow/slideshow-1-md.png"
+                                    />
+                                    <img src="./assets/img/slideshow/slideshow-1.png" alt="" class="slideshow__image" />
+                                </picture>
+                            </div>
+
+                            <!-- Slideshow 2 -->
+                            <div class="slideshow__item">
+                                <picture>
+                                    <source
+                                        media="(max-width: 767.98px)"
+                                        srcset="./assets/img/slideshow/slideshow-1-md.png"
+                                    />
+                                    <img src="./assets/img/slideshow/slideshow-1.png" alt="" class="slideshow__image" />
+                                </picture>
+                            </div>
+
+                            <!-- Slideshow 3 -->
                             <div class="slideshow__item">
                                 <picture>
                                     <source
@@ -55,7 +79,25 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Home container: 2 / Category-->
+            <section class="home__container category">
+                <div class="container">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat mollitia nobis voluptatem officia
+                    iste temporibus rem! Sequi dolorem eos magnam provident expedita, ratione doloribus delectus culpa,
+                    incidunt voluptatem recusandae quis.
+                </div>
+            </section>
+
+            <!-- Home container: 3 / Products-->
+            <section class="home__container product">
+                <div class="container">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat mollitia nobis voluptatem officia
+                    iste temporibus rem! Sequi dolorem eos magnam provident expedita, ratione doloribus delectus culpa,
+                    incidunt voluptatem recusandae quis.
+                </div>
+            </section>
         </main>
         <!-- Footer -->
         <footer id="footer"></footer>
