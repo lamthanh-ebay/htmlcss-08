@@ -133,6 +133,7 @@ table {
   border-spacing: 0;
 }
 
+/********** Mixin **********/
 /************ Base ************/
 *,
 ::before,
@@ -177,6 +178,13 @@ button {
 
 .icon {
   filter: var(--icon-color);
+}
+
+@media screen and (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
 
 /********** Grid System **********/
@@ -1451,7 +1459,6 @@ button {
     display: none !important;
   }
 }
-/********** Mixin **********/
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(36%) hue-rotate(90deg) brightness(112%)
@@ -2190,11 +2197,6 @@ html {
   border-radius: 20px;
   background: var(--product-card-bg);
   box-shadow: 0px 20px 60px 10px var(--product-card-shadow);
-}
-@media screen and (max-width: 575.98px) {
-  .product-card__gutter-list {
-    --grid-gutter-x: 40px;
-  }
 }
 .product-card__thumb-wrap {
   position: relative;
