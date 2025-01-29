@@ -2187,6 +2187,15 @@ html {
   background-color: var(--like-btn-bg);
   box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
 }
+.like-btn__icon--liked {
+  margin-top: 8px;
+}
+.like-btn:not(.like-btn--liked) .like-btn__icon--liked {
+  display: none;
+}
+.like-btn--liked .like-btn__icon {
+  display: none;
+}
 
 .product-card {
   position: relative;

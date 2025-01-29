@@ -28,4 +28,16 @@
 
     background-color: var(--like-btn-bg);
     box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+
+    &__icon--liked {
+        margin-top: 8px;
+    }
+
+    &:not(&--liked) .like-btn__icon--liked {
+        display: none;
+    }
+
+    &--liked .like-btn__icon {
+        display: none;
+    }
 }
