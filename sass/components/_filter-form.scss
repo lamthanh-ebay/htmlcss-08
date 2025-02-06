@@ -14,6 +14,16 @@
     background-color: var(--filter-form-bg-color);
     filter: drop-shadow(0px 40px 90px var(--product-card-shadow));
 
+    transition: opacity, visibility;
+    transition-duration: 0.5s;
+
+    // Đóng mở Filter bằng Javascript
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+    // End: Đóng mở Filter
+
     &__arrow-up {
         position: absolute;
         top: -18px;

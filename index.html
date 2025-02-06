@@ -150,13 +150,13 @@
                     <div class="home__row">
                         <h2 class="home__heading">Total LavAzza 1320</h2>
                         <div class="filter__wrap">
-                            <button class="filter-btn">
+                            <button class="filter-btn js-toggle" toggle-target="#home-filter">
                                 Filter
                                 <img src="./assets/icons/filter.svg" alt="" class="filter-btn__icon icon" />
                             </button>
 
                             <!-- Filter -->
-                            <div class="filter">
+                            <div id="home-filter" class="filter hide">
                                 <img src="./assets/icons/arrow-up.png" alt="" class="filter__arrow-up" />
                                 <p class="filter__heading">Filter</p>
 
@@ -274,8 +274,18 @@
 
                                     <!-- Filter row Bottom -->
                                     <div class="filter-form__row filter-form__row-bottom">
-                                        <button class="btn btn--text filter-form__cancel">Cancel</button>
-                                        <button class="btn btn--primary filter-form__submit">Show Result</button>
+                                        <button
+                                            class="btn btn--text filter-form__cancel js-toggle"
+                                            toggle-target="#home-filter"
+                                        >
+                                            Cancel
+                                        </button>
+                                        <button
+                                            class="btn btn--primary filter-form__submit js-toggle"
+                                            toggle-target="#home-filter"
+                                        >
+                                            Show Result
+                                        </button>
                                     </div>
                                 </form>
                             </div>

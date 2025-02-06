@@ -2307,6 +2307,12 @@ html {
   border-radius: 20px;
   background-color: var(--filter-form-bg-color);
   filter: drop-shadow(0px 40px 90px var(--product-card-shadow));
+  transition: opacity, visibility;
+  transition-duration: 0.5s;
+}
+.filter.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 .filter__arrow-up {
   position: absolute;
