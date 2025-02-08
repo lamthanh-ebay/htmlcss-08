@@ -2328,6 +2328,7 @@ html {
   .filter {
     position: fixed;
     inset: 0;
+    border-radius: 0;
   }
 }
 .filter.hide {
@@ -2460,12 +2461,12 @@ html {
   }
 }
 .filter-form__text-input--small .filter-form__input {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 142.857%;
 }
 .filter-form__input {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 142.857%;
 }
