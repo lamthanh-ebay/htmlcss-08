@@ -2319,9 +2319,15 @@ html {
   transition: opacity, visibility;
   transition-duration: 0.5s;
 }
+@media screen and (max-width: 991.98px) {
+  .filter {
+    padding: 30px 0;
+  }
+}
 @media screen and (max-width: 575.98px) {
   .filter {
-    width: 90vw;
+    position: fixed;
+    inset: 0;
   }
 }
 .filter.hide {
@@ -2340,23 +2346,32 @@ html {
   font-weight: 500;
   line-height: 145.455%;
 }
+@media screen and (max-width: 991.98px) {
+  .filter__heading {
+    padding: 0 30px;
+  }
+}
 .filter-form {
   margin-top: 30px;
 }
 .filter-form__row {
   display: flex;
 }
+.filter-form__row--content {
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
 @media screen and (max-width: 991.98px) {
   .filter-form__row--content {
     flex-direction: column;
-    max-height: calc(100vh - 370px);
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
+    padding: 0 30px 30px;
   }
 }
 @media screen and (max-width: 575.98px) {
   .filter-form__row--content {
-    max-height: calc(100vh - 330px);
+    max-height: calc(100vh - 230px);
+    padding: 0 30px 40px;
   }
 }
 .filter-form__label {
@@ -2506,6 +2521,11 @@ html {
   column-gap: 20px;
   row-gap: 10px;
 }
+@media screen and (max-width: 575.98px) {
+  .filter-form__tags {
+    gap: 10px;
+  }
+}
 .filter-form__tag {
   height: 32px;
   padding: 0 12px;
@@ -2522,11 +2542,31 @@ html {
 }
 .filter-form__row-bottom {
   justify-content: flex-end;
-  margin-top: 32px;
+  margin-top: 20px;
+  position: sticky;
+  bottom: 0;
+  background: var(--filter-form-bg-color);
+}
+@media screen and (max-width: 991.98px) {
+  .filter-form__row-bottom {
+    margin-top: 0;
+    padding: 10px 30px 0;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .filter-form__row-bottom {
+    padding: 10px 30px 0;
+  }
 }
 .filter-form__cancel, .filter-form__submit {
   height: 38px;
   padding: 0 10px;
+}
+@media screen and (max-width: 575.98px) {
+  .filter-form__cancel, .filter-form__submit {
+    flex-grow: 1;
+    height: 42px;
+  }
 }
 .filter-form__cancel {
   color: #9e9da8;
@@ -2541,13 +2581,13 @@ html {
   width: 1px;
   margin: 0 30px;
   background-color: #eee;
+  flex-shrink: 0;
 }
 @media screen and (max-width: 991.98px) {
   .filter__separate {
     width: 100%;
     height: 1px;
     margin: 30px 0;
-    flex-shrink: 0;
   }
 }
 
