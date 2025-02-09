@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .social {
     display: flex;
     flex-direction: column;
@@ -13,6 +15,21 @@
         display: flex;
         align-items: center;
         gap: 16px;
+
+        @include abstracts.screen(xl) {
+            gap: 12px;
+        }
+
+        @include abstracts.screen(lg) {
+            gap: 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            width: 80%;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px 32px;
+        }
     }
 
     &__icon-wrap {
@@ -27,6 +44,11 @@
 
         background-color: #fff;
         box-shadow: 0px 6px 12px rgba(24, 39, 75, 0.12);
+
+        @include abstracts.screen(sm) {
+            width: 42px;
+            height: 42px;
+        }
     }
 
     &__icon {

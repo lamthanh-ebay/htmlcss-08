@@ -46,6 +46,11 @@ html {
     // Like btn
     --like-btn-bg: #fff;
 
+    //******** Footer ********//
+    --footer-gradient-bg-1: #eee;
+    --footer-gradient-bg-2: #fff;
+    --footer-top-btn-border: #000;
+
     //******** Responsive ********//
     //Header
     @include abstracts.screen(lg) {

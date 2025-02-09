@@ -1,6 +1,20 @@
+@use "../abstracts";
+
 .footer {
     margin-top: 50px;
-    background-image: linear-gradient(40deg, #eee 56%, #fff 56%);
+    background-image: linear-gradient(40deg, var(--footer-gradient-bg-1) 54%, var(--footer-gradient-bg-2) 54%);
+
+    @include abstracts.screen(xl) {
+        background-image: linear-gradient(54deg, var(--footer-gradient-bg-1) 54%, var(--footer-gradient-bg-2) 54%);
+    }
+
+    @include abstracts.screen(lg) {
+        background-image: linear-gradient(70deg, var(--footer-gradient-bg-1) 56%, var(--footer-gradient-bg-2) 56%);
+    }
+
+    @include abstracts.screen(md) {
+        background-image: linear-gradient(to right, var(--footer-gradient-bg-1) 100%, var(var(--footer-gradient-bg-1)));
+    }
 
     &-separate {
         width: 100%;
@@ -11,6 +25,10 @@
 
     &-body {
         margin-top: 68px;
+
+        @include abstracts.screen(sm) {
+            margin-top: 50px;
+        }
     }
 }
 
@@ -20,11 +38,26 @@
     align-items: center;
     justify-content: space-between;
 
+    @include abstracts.screen(md) {
+        justify-content: space-around;
+    }
+
+    @include abstracts.screen(sm) {
+        &__logo .logo__img {
+            width: 32px;
+            height: 32px;
+        }
+
+        &__logo .logo__title {
+            font-size: 2.2rem;
+        }
+    }
+
     &__btn {
         min-width: 222px;
         height: 40px;
         padding: 0 26px;
-        border-color: #000 !important;
+        border-color: var(--footer-top-btn-border) !important;
 
         box-shadow: 0px 6px 8px -6px rgba(24, 39, 75, 0.12), 0px 8px 16px -6px rgba(24, 39, 75, 0.08);
         transition: box-shadow 0.15s;
@@ -32,12 +65,24 @@
         &:hover {
             box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.1);
         }
+
+        @include abstracts.screen(md) {
+            min-width: 180px;
+        }
+
+        @include abstracts.screen(sm) {
+            display: none !important;
+        }
     }
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
+
+    @include abstracts.screen(lg) {
+        flex-direction: column;
+    }
 
     &__heading {
         font-size: 1.8rem;
@@ -60,24 +105,66 @@
         &:hover {
             text-decoration: underline;
         }
+
+        @include abstracts.screen(sm) {
+            padding: 14px 0;
+        }
+    }
+
+    @include abstracts.screen(md) {
+        &__heading,
+        &__list {
+            text-align: center;
+        }
     }
 }
 
 .footer-menu {
     width: 60%;
+
+    @include abstracts.screen(xl) {
+        width: 80%;
+    }
+
+    @include abstracts.screen(lg) {
+        width: 100%;
+    }
 }
 
 .footer-social {
     width: 36%;
+
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+        width: 100%;
+        align-items: center !important;
+    }
+
+    @include abstracts.screen(sm) {
+        margin-top: 52px;
+    }
 }
 
 .footer-bottom {
-    margin-top: 147px;
+    margin-top: 130px;
     padding-bottom: 70px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include abstracts.screen(lg) {
+        margin-top: 70px;
+    }
+
+    @include abstracts.screen(md) {
+        flex-direction: column-reverse;
+        row-gap: 20px;
+    }
+
+    @include abstracts.screen(sm) {
+        padding-bottom: 52px;
+    }
 
     &__copyright {
         font-size: 1.2rem;
@@ -87,6 +174,10 @@
     &__list {
         display: flex;
         align-items: center;
+        @include abstracts.screen(sm) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__link {
@@ -96,6 +187,14 @@
 
         &:hover {
             text-decoration: underline;
+        }
+
+        @include abstracts.screen(xl) {
+            padding: 8px 10px;
+        }
+
+        @include abstracts.screen(sm) {
+            padding: 14px 10px;
         }
     }
 }
