@@ -1500,6 +1500,7 @@ html.dark {
   --footer-gradient-bg-1: #171c28;
   --footer-gradient-bg-2: #171c28;
   --footer-top-btn-border: #fff;
+  --footer-content-link-color: #9e9da8;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1790,7 +1791,7 @@ html {
 }
 @media screen and (max-width: 767.98px) {
   .footer {
-    background-image: linear-gradient(to right, var(--footer-gradient-bg-1) 100%, var(var(--footer-gradient-bg-1)));
+    background: var(--footer-gradient-bg-1);
   }
 }
 .footer-separate {
@@ -1866,10 +1867,16 @@ html {
 .footer-content__list {
   margin-top: 24px;
 }
+@media screen and (max-width: 575.98px) {
+  .footer-content__list {
+    margin-top: 12px;
+  }
+}
 .footer-content__link {
   display: block;
   padding: 8px 0;
   font-size: 1.6rem;
+  color: var(--footer-content-link-color);
 }
 .footer-content__link:hover {
   text-decoration: underline;
@@ -1956,6 +1963,7 @@ html {
   display: inline-block;
   padding: 8px 20px;
   font-size: 1.4rem;
+  color: var(--footer-content-link-color);
 }
 .footer-bottom__link:hover {
   text-decoration: underline;
