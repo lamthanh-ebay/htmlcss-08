@@ -51,6 +51,9 @@ html {
     --footer-gradient-bg-2: #fff;
     --footer-top-btn-border: #000;
 
+    //Auth
+    --auth-content-bg: #fff;
+
     //******** Responsive ********//
     //Header
     @include abstracts.screen(lg) {

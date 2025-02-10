@@ -1,0 +1,109 @@
+.auth {
+    min-height: 100vh;
+    display: flex;
+
+    &-intro,
+    &-content {
+        flex-grow: 1;
+    }
+
+    // Auth intro
+    &-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__image {
+            width: 422px;
+        }
+
+        &__desc {
+            margin-top: 50px;
+            max-width: 412px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+    }
+
+    // Auth content
+    &-content {
+        padding: 50px 0;
+        background-color: var(--auth-content-bg);
+
+        &__inner {
+            max-width: 460px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__heading {
+            margin-top: 50px;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+
+        &__desc {
+            margin-top: 10px;
+            padding: 0 30px;
+
+            color: #9e9da8;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+
+        &__link {
+            color: #0071dc;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 146.667%;
+        }
+
+        &__text {
+            margin-top: 108px;
+
+            color: #9e9da8;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 144.444%;
+
+            .auth-content__link {
+                display: inline-block;
+                padding: 0 10px;
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    // Auth form
+    &-form {
+        margin-top: 60px;
+        width: 100%;
+
+        &__btn-group {
+            margin-top: 50px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+    }
+}
