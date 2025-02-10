@@ -26,15 +26,29 @@
         <main class="auth">
             <!-- Auth intro -->
             <div class="auth-intro">
+                <!-- Logo -->
+                <a href="./" class="logo auth-intro__logo d-none d-md-flex">
+                    <img
+                        src="./assets/img/logo-grocery-mart.svg"
+                        alt="Grocery Mart"
+                        class="logo__img auth-intro__logo-img"
+                    />
+                    <p class="logo__title auth-intro__logo-title">grocerymart</p>
+                </a>
+
                 <img src="./assets/img/auth/auth-intro-image.svg" alt="Sign Up" class="auth-intro__image" />
 
                 <p class="auth-intro__desc">
                     The best of luxury brand values, high quality products, and innovative services
                 </p>
+
+                <button class="auth-intro__arrow d-none d-md-block js-toggle" toggle-target="#auth-content">
+                    <img src="./assets/img/auth/auth-arrow.svg" alt="" />
+                </button>
             </div>
 
             <!-- Auth content -->
-            <div class="auth-content">
+            <div id="auth-content" class="auth-content hide">
                 <div class="auth-content__inner">
                     <!-- Logo -->
                     <a href="./" class="logo auth-content__logo">
@@ -49,7 +63,7 @@
                     <p class="auth-content__desc">Let’s create your account and Shop like a pro and save money.</p>
 
                     <!-- Auth form -->
-                    <form action="" class="form auth-form">
+                    <form action="./index-logined.html" class="form auth-form">
                         <div class="form__group">
                             <div class="form__text-input">
                                 <input
@@ -107,5 +121,10 @@
                 </div>
             </div>
         </main>
+
+        <!-- JavaScript -->
+        <script>
+            window.dispatchEvent(new Event("template-loaded"));
+        </script>
     </body>
 </html>

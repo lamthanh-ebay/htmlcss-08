@@ -177,6 +177,11 @@
 
     @include abstracts.screen(md) {
         margin-left: initial;
+
+        &__sign-up {
+            height: 42px !important;
+            padding: 0 8px !important;
+        }
     }
 
     &__group {
