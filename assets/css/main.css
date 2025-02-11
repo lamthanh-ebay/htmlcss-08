@@ -1466,6 +1466,17 @@ button {
     display: none !important;
   }
 }
+@keyframes shake {
+  0%, 100% {
+    translate: 0;
+  }
+  25%, 75% {
+    translate: 4px;
+  }
+  50% {
+    translate: -4px;
+  }
+}
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(36%) hue-rotate(90deg) brightness(112%)
@@ -2889,6 +2900,35 @@ html {
 .form__text-input:focus-within {
   border-color: #77dae6;
 }
+.form__error-text {
+  margin-top: 10px;
+  text-align: left;
+  color: red;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: none;
+}
+.form__input-icon-error {
+  margin-left: 12px;
+  width: 20px;
+  display: none;
+  animation: shake 0.5s;
+}
+.form__text-input:has(:invalid):has(.form__input:not(:placeholder-shown)) {
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.form__text-input:has(:invalid):has(.form__input:not(:placeholder-shown)) ~ .form__error-text,
+.form__text-input:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon-error {
+  display: block;
+}
+.form__text-input:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
 .form__input {
   height: 100%;
   flex: 1;
@@ -2914,10 +2954,43 @@ html {
   margin: 0;
 }
 .form__label {
+  display: flex;
+  align-items: center;
+  position: relative;
   color: #9e9da8;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+  user-select: none;
+}
+.form__checkbox-input:checked ~ .form__label::before {
+  background-color: #ffb700;
+  border-color: #ffb700;
+}
+.form__checkbox-input:checked ~ .form__label::after {
+  display: inline-block;
+}
+.form__label::before, .form__label::after {
+  content: "";
+  display: inline-block;
+}
+.form__label::before {
+  margin-right: 10px;
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
+  border: 1.5px solid #9e9da8;
+}
+.form__label::after {
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 11px;
+  height: 6px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  rotate: -45deg;
+  display: none;
 }
 
 .home__container {
@@ -2979,6 +3052,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
 }
 .auth-intro__logo, .auth-intro__arrow {
   position: absolute;

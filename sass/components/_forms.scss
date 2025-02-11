@@ -26,6 +26,44 @@
         }
     }
 
+    // Begin: Validation
+    &__error-text {
+        margin-top: 10px;
+        text-align: left;
+        color: red;
+        font-size: 1.4rem;
+        font-weight: 500;
+        display: none;
+    }
+
+    &__input-icon-error {
+        margin-left: 12px;
+        width: 20px;
+        display: none;
+        animation: shake 0.5s;
+    }
+
+    &__text-input:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        border-color: red;
+        background-color: rgba($color: red, $alpha: 0.1);
+
+        ~ .form__error-text,
+        .form__input-icon-error {
+            display: block;
+        }
+
+        .form__input-icon {
+            display: none;
+        }
+    }
+
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    // End: Validation
+
     &__input {
         height: 100%;
         flex: 1;
@@ -58,9 +96,51 @@
     }
 
     &__label {
+        display: flex;
+        align-items: center;
+        position: relative;
+
         color: #9e9da8;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+        user-select: none;
     }
+    // BEGIN: Custom Checkbox
+    &__checkbox-input:checked ~ &__label::before {
+        background-color: #ffb700;
+        border-color: #ffb700;
+    }
+
+    &__checkbox-input:checked ~ &__label::after {
+        display: inline-block;
+    }
+
+    &__label::before,
+    &__label::after {
+        content: "";
+        display: inline-block;
+    }
+
+    &__label::before {
+        margin-right: 10px;
+        width: 19px;
+        height: 19px;
+        border-radius: 5px;
+        border: 1.5px solid #9e9da8;
+    }
+
+    &__label::after {
+        position: absolute;
+        top: 6px;
+        left: 4px;
+        width: 11px;
+        height: 6px;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        rotate: -45deg;
+        display: none;
+    }
+
+    // END: Custom Checkbox
 }

@@ -20,6 +20,8 @@
         align-items: center;
         justify-content: center;
 
+        overflow-y: auto;
+
         &__logo,
         &__arrow {
             position: absolute;
