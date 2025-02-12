@@ -1,6 +1,12 @@
+@use "../abstracts";
+
 .form {
     &__group {
         margin-top: 30px;
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -20,6 +26,10 @@
         padding: 0 12px;
         border-radius: 10px;
         border: 1.5px solid #d2d1d6;
+
+        @include abstracts.screen(md) {
+            height: 48px;
+        }
 
         &:focus-within {
             border-color: #77dae6;
@@ -72,6 +82,11 @@
         font-weight: 500;
         line-height: 144.444%;
 
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+
         &::placeholder {
             color: #d2d1d6;
         }
@@ -105,6 +120,12 @@
         font-weight: 500;
         line-height: 146.667%;
         user-select: none;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 142.857%;
+        }
     }
     // BEGIN: Custom Checkbox
     &__checkbox-input:checked ~ &__label::before {
