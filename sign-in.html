@@ -22,18 +22,100 @@
         <script src="./assets/js/scrips.js"></script>
     </head>
     <body>
-        <!-- Header -->
-        <header id="header"></header>
-        <script>
-            load("#header", "./template/header.html");
-        </script>
-
         <!-- Main -->
-        <h1>Sign in Page</h1>
-        <!-- Footer -->
-        <footer id="footer" class="footer"></footer>
+        <main class="auth">
+            <!-- Auth intro -->
+            <div class="auth-intro d-md-none">
+                <img src="./assets/img/auth/auth-intro-image.svg" alt="Sign Up" class="auth-intro__image" />
+
+                <p class="auth-intro__desc">
+                    The best of luxury brand values, high quality products, and innovative services
+                </p>
+            </div>
+
+            <!-- Auth content -->
+            <div class="auth-content">
+                <div class="auth-content__inner">
+                    <!-- Logo -->
+                    <a href="./" class="logo auth-content__logo">
+                        <img src="./assets/img/logo-grocery-mart.svg" alt="Grocery Mart" class="logo__img" />
+                        <p class="logo__title">grocerymart</p>
+                    </a>
+
+                    <!-- Auth heading -->
+                    <h1 class="auth-content__heading">Hello Again!</h1>
+
+                    <!-- Auth content desc -->
+                    <p class="auth-content__desc">
+                        Welcome back to sign in. As a returning customer, you have access to your previously saved all
+                        information.
+                    </p>
+
+                    <!-- Auth form -->
+                    <form action="./index-logined.html" class="form auth-form" autocomplete="off">
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input
+                                    type="email"
+                                    name=""
+                                    id=""
+                                    placeholder="Email"
+                                    class="form__input"
+                                    required
+                                    pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                />
+                                <img src="./assets/icons/message.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error-text">Email chưa đúng định dạng</p>
+                        </div>
+                        <div class="form__group">
+                            <div class="form__text-input">
+                                <input
+                                    type="password"
+                                    name=""
+                                    id=""
+                                    placeholder="Password"
+                                    class="form__input"
+                                    required
+                                    minlength="6"
+                                />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error-text">Mật khẩu ít nhất 6 ký tự</p>
+                        </div>
+
+                        <div class="form__group form__group--inline">
+                            <label class="form__checkbox-label">
+                                <input type="checkbox" name="" id="" class="form__checkbox-input" hidden />
+                                <span class="form__label">Set as default card</span>
+                            </label>
+                            <a href="#!" class="auth-content__link form__pull-right">Recovery Password</a>
+                        </div>
+
+                        <!-- Form btn -->
+                        <div class="form__group auth-form__btn-group">
+                            <button class="btn btn--primary auth-form__btn form__submit-btn">Sign In</button>
+                            <button class="btn btn--outline auth-form__btn btn--no-margin">
+                                <img src="./assets/icons/google-icon.svg" alt="" class="auth-form__btn-icon" />
+                                Sign in with Google
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Auth form text - Footer -->
+                    <p class="auth-content__text">
+                        Don’t have an account yet?
+                        <a href="./sign-up.html" class="auth-content__link">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- JavaScript -->
         <script>
-            load("#footer", "./template/footer.html");
+            window.dispatchEvent(new Event("template-loaded"));
         </script>
     </body>
 </html>

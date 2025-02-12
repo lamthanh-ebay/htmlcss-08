@@ -2986,6 +2986,9 @@ html {
     font-weight: 400;
     line-height: 142.857%;
   }
+  .form__label::before {
+    margin-bottom: 5px;
+  }
 }
 .form__checkbox-input:checked ~ .form__label::before {
   background-color: #ffb700;
@@ -3156,7 +3159,7 @@ html {
 }
 .auth-content__desc {
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 20px;
   color: #9e9da8;
   font-size: 1.5rem;
   font-weight: 500;
