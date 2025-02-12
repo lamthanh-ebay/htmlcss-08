@@ -1513,6 +1513,11 @@ html.dark {
   --footer-gradient-bg-2: #171c28;
   --footer-top-btn-border: #fff;
   --footer-content-link-color: #9e9da8;
+  --auth-intro-bg: #171c28;
+  --auth-intro-desc-color: #b9babe;
+  --auth-content-bg: #292e39;
+  --auth-heading-color: #b9babe;
+  --form-input-placeholder-color: #b9babe;
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1550,6 +1555,7 @@ html {
   --footer-gradient-bg-2: #fff;
   --footer-top-btn-border: #000;
   --auth-content-bg: #fff;
+  --form-input-placeholder-color: #d2d1d6;
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1560,6 +1566,11 @@ html {
 @media screen and (max-width: 767.98px) {
   html {
     --category-item-bg: #fff;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --auth-intro-bg: #fff;
   }
 }
 
@@ -2954,7 +2965,7 @@ html {
   }
 }
 .form__input::placeholder {
-  color: #d2d1d6;
+  color: var(--form-input-placeholder-color);
 }
 .form__input-icon {
   margin-left: 12px;
@@ -3085,6 +3096,7 @@ html {
   align-items: center;
   justify-content: center;
   overflow-y: auto;
+  background-color: var(--auth-intro-bg);
 }
 .auth-intro__logo, .auth-intro__arrow {
   position: absolute;
@@ -3108,6 +3120,7 @@ html {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+  color: var(--auth-intro-desc-color);
 }
 @media screen and (max-width: 767.98px) {
   .auth-intro__desc {
@@ -3149,6 +3162,7 @@ html {
   font-size: 3rem;
   font-weight: 500;
   line-height: 146.667%;
+  color: var(--auth-heading-color);
 }
 @media screen and (max-width: 767.98px) {
   .auth-content__heading {

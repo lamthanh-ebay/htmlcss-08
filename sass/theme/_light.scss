@@ -54,6 +54,9 @@ html {
     //Auth
     --auth-content-bg: #fff;
 
+    // Form
+    --form-input-placeholder-color: #d2d1d6;
+
     //******** Responsive ********//
     //Header
     @include abstracts.screen(lg) {
@@ -64,5 +67,10 @@ html {
     // Category item
     @include abstracts.screen(md) {
         --category-item-bg: #fff;
+    }
+
+    //Auth
+    @include abstracts.screen(md) {
+        --auth-intro-bg: #fff;
     }
 }
