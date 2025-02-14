@@ -127,6 +127,10 @@
             }
         }
 
+        &__message {
+            margin-top: 30px;
+        }
+
         &__link {
             color: #0071dc;
             font-size: 1.5rem;
@@ -173,6 +177,10 @@
             margin-top: 20px;
         }
 
+        &__reset-pass {
+            margin-top: 30px;
+        }
+
         &__btn-group {
             margin-top: 50px;
 
@@ -183,6 +191,10 @@
             @include abstracts.screen(md) {
                 margin-top: 30px;
                 gap: 20px;
+            }
+
+            &--reset-pass {
+                margin-top: 30px;
             }
         }
 
