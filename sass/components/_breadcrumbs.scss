@@ -1,0 +1,38 @@
+@use "../abstracts";
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 28.5px;
+
+    min-height: 64px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: var(--breadcrumbs-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow-color);
+
+    @include abstracts.screen(md) {
+        gap: 4px 24.5px;
+    }
+
+    &__item {
+        &:last-child .breadcrumbs__link {
+            color: inherit;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 16.5px;
+
+        padding: 8px 0;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+        color: #9e9da8;
+        white-space: nowrap;
+    }
+}
