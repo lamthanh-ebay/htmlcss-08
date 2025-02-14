@@ -76,3 +76,40 @@
         }
     }
 }
+
+.product-info {
+    padding: 60px;
+    border-radius: 10px;
+    background-color: #f6f6f6;
+}
+
+.product__heading {
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 138.462%;
+}
+
+.product-prop {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+
+    &__icon {
+        align-self: flex-start;
+        padding: 3px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 4px;
+
+        font-size: 1.4rem;
+        line-height: 142.857%;
+    }
+}
