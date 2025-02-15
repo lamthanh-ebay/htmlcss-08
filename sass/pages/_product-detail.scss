@@ -89,6 +89,59 @@
     &__tag {
         background-color: #ededf6;
     }
+
+    &__card {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 6px;
+        border: 1px solid #b9babe;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__price {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+
+        &-total {
+            display: block;
+            margin: 20px 0;
+            font-size: 2.6rem;
+            font-weight: 500;
+            line-height: 138.462%;
+        }
+    }
+
+    &__tax {
+        margin-left: 10px;
+        padding: 2px 8px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), #67b044;
+
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+        color: #67b044;
+    }
+
+    &__add-to-cart {
+        flex: 1;
+
+        font-size: 1.8rem;
+        line-height: 144.444%;
+    }
+
+    &__like-btn {
+        margin-left: 20px;
+        width: 46px;
+        height: 46px;
+        border-radius: 6px;
+        border: 1px solid #d2d1d6;
+        background-color: transparent;
+    }
 }
 
 .product__heading {
