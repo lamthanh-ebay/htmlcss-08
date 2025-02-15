@@ -3389,7 +3389,7 @@ html {
   border-radius: 6px;
   border: 1px solid #b9babe;
 }
-.product-info__row {
+.product-info__card-row {
   display: flex;
   align-items: center;
 }
