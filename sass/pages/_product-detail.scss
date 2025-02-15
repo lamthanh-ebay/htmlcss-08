@@ -81,12 +81,24 @@
     padding: 60px;
     border-radius: 10px;
     background-color: #f6f6f6;
+
+    &__lable {
+        margin-top: 30px;
+    }
+
+    &__tag {
+        background-color: #ededf6;
+    }
 }
 
 .product__heading {
     font-size: 2.6rem;
     font-weight: 500;
     line-height: 138.462%;
+}
+
+.product-props {
+    padding-left: 30px;
 }
 
 .product-prop {

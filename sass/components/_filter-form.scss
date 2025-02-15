@@ -58,8 +58,6 @@
         margin-top: 30px;
 
         &__row {
-            display: flex;
-
             &--content {
                 max-height: calc(100vh - 300px);
                 overflow-y: auto;
@@ -75,30 +73,6 @@
                     max-height: calc(100vh - 230px);
                     padding: 0 30px 40px;
                 }
-            }
-        }
-
-        &__label {
-            display: block;
-            font-size: 2.2rem;
-            font-weight: 500;
-            line-height: 145.455%;
-
-            &--small {
-                margin-bottom: 10px;
-                font-size: 1.4rem;
-                line-height: 142.857%;
-            }
-        }
-
-        &__group {
-            --margin-top: 20px;
-
-            margin-top: var(--margin-top);
-
-            &--inline {
-                display: flex;
-                column-gap: 30px;
             }
         }
 
@@ -195,74 +169,6 @@
 
             &-icon {
                 margin-left: 10px;
-            }
-        }
-
-        &__select-wrap {
-            display: flex;
-            height: 45px;
-            padding: 5px 0;
-            border-radius: 6px;
-            border: 1px solid #d2d1d6;
-        }
-
-        &__select {
-            display: flex;
-            align-items: center;
-            gap: 17px;
-            padding: 0 14px;
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142.857%;
-            cursor: pointer;
-
-            &:first-child {
-                border-right: 1px solid #d2d1d6;
-                gap: 65px;
-
-                @include abstracts.screen(xl) {
-                    gap: 17px;
-                }
-            }
-
-            @include abstracts.screen(lg) {
-                flex-grow: 1;
-                justify-content: space-between;
-            }
-
-            &-icon {
-                display: block;
-                padding: 0 5px;
-            }
-        }
-
-        &__tags {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            column-gap: 20px;
-            row-gap: 10px;
-
-            @include abstracts.screen(sm) {
-                gap: 10px;
-            }
-        }
-
-        &__tag {
-            height: 32px;
-            padding: 0 12px;
-            border-radius: 6px;
-            background: var(--filter-form__tag-bg);
-
-            font-size: 1.4rem;
-            font-weight: 500;
-            line-height: 142.857%;
-            color: #9e9da8;
-            transition: color 0.2s;
-
-            &:hover {
-                color: var(--text-color);
             }
         }
 
