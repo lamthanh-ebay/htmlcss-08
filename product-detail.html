@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="">
+<html lang="vi" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,6 +31,16 @@
         <!-- Main - Product page -->
         <main class="product-page">
             <div class="container">
+                <!-- Product container: Search bar -->
+                <div class="product-container d-none d-md-block">
+                    <form action="" class="search-bar">
+                        <input type="text" name="" id="" placeholder="Search for item" class="search-bar__input" />
+                        <button type="submit" class="search-bar__btn">
+                            <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon" />
+                        </button>
+                    </form>
+                </div>
+
                 <!-- Product container: Breadcrumbs -->
                 <div class="product-container">
                     <!-- Breadcrumbs -->
@@ -180,7 +190,7 @@
                                                     <img
                                                         src="./assets/icons/document.svg"
                                                         alt=""
-                                                        class="product-prop__icon"
+                                                        class="product-prop__icon icon"
                                                     />
                                                     <div class="product-prop__info">
                                                         <p class="product-prop__title">Compare</p>
@@ -191,7 +201,7 @@
                                                     <img
                                                         src="./assets/icons/buy.svg"
                                                         alt=""
-                                                        class="product-prop__icon"
+                                                        class="product-prop__icon icon"
                                                     />
                                                     <div class="product-prop__info">
                                                         <p class="product-prop__title">Delivery</p>
@@ -203,7 +213,7 @@
                                                     <img
                                                         src="./assets/icons/bag.svg"
                                                         alt=""
-                                                        class="product-prop__icon"
+                                                        class="product-prop__icon icon"
                                                     />
                                                     <div class="product-prop__info">
                                                         <p class="product-prop__title">Pickup</p>

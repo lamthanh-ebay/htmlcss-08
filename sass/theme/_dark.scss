@@ -68,6 +68,8 @@ html.dark {
 
     // Product page
     --product-page-bg-color: #292e39;
+    --product-info-bg-color: #171c28;
+    --product-info-tax-bg: #292e39;
 
     // Breadcrumbs
     --breadcrumbs-bg-color: #171c28;
@@ -78,5 +80,18 @@ html.dark {
     // Header
     @include abstracts.screen(lg) {
         --header-shadow-color: rgba(0, 0, 0, 0.2);
+    }
+
+    // Product page
+    @include abstracts.screen(md) {
+        --product-page-bg-color: #292e39;
+        --product-container-bg-color: #171c28;
+        --product-container-shadow-color: rgba(23, 28, 40, 0.2);
+        --product-info-bg-color: transparent;
+    }
+
+    // Breadcrumbs
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg-color: transparent;
     }
 }
