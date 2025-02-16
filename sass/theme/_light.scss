@@ -59,6 +59,7 @@ html {
 
     // Product page
     --product-page-bg-color: #fff;
+    --product-info-bg-color: #f6f6f6;
 
     // Breadcrumbs
     --breadcrumbs-bg-color: #f6f6f6;
@@ -79,5 +80,18 @@ html {
     //Auth
     @include abstracts.screen(md) {
         --auth-intro-bg: #fff;
+    }
+
+    // Product page
+    @include abstracts.screen(md) {
+        --product-page-bg-color: #fafafd;
+        --product-container-bg-color: #fff;
+        --product-container-shadow-color: rgba(237, 237, 246, 0.2);
+        --product-info-bg-color: #fff;
+    }
+
+    // Breadcrumbs
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg-color: #fff;
     }
 }

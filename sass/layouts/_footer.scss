@@ -1,7 +1,6 @@
 @use "../abstracts";
 
 .footer {
-    margin-top: 50px;
     background-image: linear-gradient(40deg, var(--footer-gradient-bg-1) 54%, var(--footer-gradient-bg-2) 54%);
 
     @include abstracts.screen(xl) {

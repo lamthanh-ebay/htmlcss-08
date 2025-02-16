@@ -1,8 +1,12 @@
+@use "../abstracts";
+
 .product-page {
     min-height: 80vh;
 
     display: flex;
     flex-direction: column;
+
+    padding-bottom: 50px;
 
     background-color: var(--product-page-bg-color);
 }
@@ -10,15 +14,40 @@
 // product-container
 .product-container {
     margin-top: 30px;
+    border-radius: 20px;
+    background-color: var(--product-container-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--product-container-shadow-color);
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 }
 
 // product-preview
 .product-preview {
+    @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    @include abstracts.screen(md) {
+        flex-direction: column;
+    }
+
     &__list {
         display: flex;
         align-items: center;
         padding: 30px;
         overflow: hidden;
+
+        @include abstracts.screen(lg) {
+            flex: 1;
+            padding: 10px 30px;
+        }
+
+        @include abstracts.screen(md) {
+            padding: 16px;
+        }
     }
 
     &__item {
@@ -45,6 +74,19 @@
         gap: 16px;
         padding: 30px;
         overflow: hidden;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            padding: 10px 30px 10px 10px;
+        }
+
+        @include abstracts.screen(md) {
+            flex-direction: row;
+            padding: 0 0 20px;
+            margin: 10px 16px 4px;
+            justify-content: flex-start;
+            overflow-x: auto;
+        }
     }
 
     &__thumb {
@@ -80,7 +122,24 @@
 .product-info {
     padding: 60px;
     border-radius: 10px;
-    background-color: #f6f6f6;
+    background-color: var(--product-info-bg-color);
+
+    @include abstracts.screen(xxl) {
+        padding: 30px;
+    }
+
+    @include abstracts.screen(xl) {
+        padding: 20px;
+    }
+
+    @include abstracts.screen(lg) {
+        padding: 30px;
+    }
+
+    @include abstracts.screen(md) {
+        padding: 0 16px 16px;
+        border-radius: 20px;
+    }
 
     &__lable {
         margin-top: 30px;
@@ -95,6 +154,18 @@
         padding: 20px;
         border-radius: 6px;
         border: 1px solid #b9babe;
+
+        @include abstracts.screen(xl) {
+            padding: 14px;
+        }
+
+        @include abstracts.screen(lg) {
+            padding: 20px;
+        }
+
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
     }
 
     &__card-row {
@@ -141,6 +212,32 @@
         border-radius: 6px;
         border: 1px solid #d2d1d6;
         background-color: transparent;
+
+        @include abstracts.screen(xl) {
+            margin-left: 10px;
+        }
+
+        @include abstracts.screen(lg) {
+            margin-left: 20px;
+        }
+    }
+
+    &__select-prop-wrap {
+        @include abstracts.screen(lg) {
+            width: 60%;
+        }
+
+        @include abstracts.screen(md) {
+            width: initial;
+        }
+    }
+
+    &__select {
+        flex: 1;
+
+        @include abstracts.screen(xxl) {
+            justify-content: space-between;
+        }
     }
 }
 
@@ -148,10 +245,24 @@
     font-size: 2.6rem;
     font-weight: 500;
     line-height: 138.462%;
+
+    @include abstracts.screen(md) {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 144.444%;
+    }
 }
 
 .product-props {
     padding-left: 30px;
+
+    @include abstracts.screen(xxl) {
+        padding-left: 10px;
+    }
+
+    @include abstracts.screen(xl) {
+        padding-left: 0;
+    }
 }
 
 .product-prop {
@@ -159,6 +270,10 @@
     align-items: center;
     gap: 16px;
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
 
     &__icon {
         align-self: flex-start;
