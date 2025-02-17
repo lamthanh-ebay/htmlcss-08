@@ -284,11 +284,21 @@
 }
 
 .product-content {
+    @include abstracts.screen(md) {
+        padding: 16px;
+    }
+
     // Product content tab
     &__tab-list {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        row-gap: 4px;
         margin: 0 -30px;
+
+        @include abstracts.screen(md) {
+            margin: -6px -20px;
+        }
     }
 
     &__tab-item {
@@ -298,6 +308,11 @@
         line-height: 145.455%;
         color: #9e9da8;
         user-select: none;
+        white-space: nowrap;
+
+        @include abstracts.screen(md) {
+            padding: 6px 20px;
+        }
 
         &:not(&--current) {
             cursor: pointer;
