@@ -72,7 +72,7 @@
         align-items: center;
         justify-content: flex-start;
         gap: 16px;
-        padding: 30px;
+        padding: 0 30px;
         overflow: hidden;
 
         @include abstracts.screen(lg) {
@@ -280,5 +280,47 @@
 
         font-size: 1.4rem;
         line-height: 142.857%;
+    }
+}
+
+.product-content {
+    // Product content tab
+    &__tab {
+        display: flex;
+        align-items: center;
+        margin: 0 -30px;
+
+        &-item {
+            padding: 0 30px;
+            cursor: pointer;
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 145.455%;
+            color: #9e9da8;
+
+            &--current {
+                color: inherit;
+            }
+        }
+    }
+    // Product content info
+    &__info {
+        display: none;
+        padding-top: 30px;
+
+        &--current {
+            display: block;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 30px;
+
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+    }
+
+    &__reviews {
     }
 }
