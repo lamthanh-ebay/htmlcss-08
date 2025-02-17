@@ -195,6 +195,20 @@ button {
   }
 }
 
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+u {
+  text-decoration: underline;
+}
+
 /********** Grid System **********/
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
@@ -3186,6 +3200,82 @@ html {
   line-height: 144.444%;
 }
 
+.text-content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6 {
+  font-weight: 700;
+}
+.text-content h1 {
+  font-size: 2.6rem;
+}
+.text-content h2 {
+  font-size: 2.4rem;
+}
+.text-content h3 {
+  font-size: 2rem;
+}
+.text-content h4 {
+  font-size: 1.8rem;
+}
+.text-content h5 {
+  font-size: 1.6rem;
+}
+.text-content h6 {
+  font-size: 1.4rem;
+}
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6,
+.text-content p,
+.text-content blockquote,
+.text-content img,
+.text-content figure,
+.text-content ul,
+.text-content ol,
+.text-content table {
+  margin: 20px 0;
+}
+.text-content a {
+  color: #ffb700;
+  text-decoration: underline;
+}
+.text-content hr {
+  margin: 40px 0;
+  height: 1px;
+  border: none;
+  background-color: #ebebeb;
+}
+.text-content img {
+  display: block;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-content img + em {
+  display: block;
+  font-size: 1.4rem;
+  text-align: center;
+  font-style: italic;
+}
+.text-content blockquote {
+  padding: 20px;
+  border-left: 3px solid #ffb700;
+  background-color: rgba(255, 183, 0, 0.1);
+}
+.text-content blockquote p {
+  margin: 0;
+}
+
 .home {
   padding-bottom: 50px;
 }
@@ -3688,7 +3778,7 @@ html {
   line-height: 142.857%;
 }
 
-.product-content__tab {
+.product-content__tab-list {
   display: flex;
   align-items: center;
   margin: 0 -30px;
