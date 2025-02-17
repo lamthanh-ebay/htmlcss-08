@@ -194,3 +194,30 @@ window.addEventListener("template-loaded", () => {
         };
     });
 });
+
+/* Đóng mở các Tab chi tiết sản phẩm ở phần Product Content */
+/* Dán .js-tabs vào div ôm bên ngoài của:
+/* .product-content__tab-item và .product-content__info
+/* Lưu ý sửa các Class cho đúng tên nhé.
+*/
+window.addEventListener("template-loaded", () => {
+    const tabsSelector = "product-content__tab-item";
+    const contentsSelector = "product-content__info";
+
+    const tabActive = `${tabsSelector}--current`;
+    const contentActive = `${contentsSelector}--current`;
+
+    const tabContainers = $$(".js-tabs");
+    tabContainers.forEach((tabContainer) => {
+        const tabs = tabContainer.querySelectorAll(`.${tabsSelector}`);
+        const contents = tabContainer.querySelectorAll(`.${contentsSelector}`);
+        tabs.forEach((tab, index) => {
+            tab.onclick = () => {
+                tabContainer.querySelector(`.${tabActive}`)?.classList.remove(tabActive);
+                tabContainer.querySelector(`.${contentActive}`)?.classList.remove(contentActive);
+                tab.classList.add(tabActive);
+                contents[index].classList.add(contentActive);
+            };
+        });
+    });
+});
