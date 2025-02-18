@@ -66,6 +66,10 @@ html {
     --breadcrumbs-bg-color: #f6f6f6;
     --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
 
+    // Review card
+    --review-card-bg-color: #fafafd;
+    --review-card-shadow: rgba(237, 237, 246, 0);
+
     //******** Responsive ********//
     //Header
     @include abstracts.screen(lg) {
@@ -94,5 +98,10 @@ html {
     // Breadcrumbs
     @include abstracts.screen(md) {
         --breadcrumbs-bg-color: #fff;
+    }
+
+    // Review card
+    @include abstracts.screen(md) {
+        --review-card-bg-color: #fff;
     }
 }

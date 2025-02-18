@@ -1540,6 +1540,8 @@ html.dark {
   --product-info-tax-bg: #292e39;
   --breadcrumbs-bg-color: #171c28;
   --breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
+  --review-card-bg-color: #171c28;
+  --review-card-shadow: rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1596,6 +1598,8 @@ html {
   --product-info-tax-bg: #ededf6;
   --breadcrumbs-bg-color: #f6f6f6;
   --breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
+  --review-card-bg-color: #fafafd;
+  --review-card-shadow: rgba(237, 237, 246, 0);
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -1624,6 +1628,11 @@ html {
 @media screen and (max-width: 767.98px) {
   html {
     --breadcrumbs-bg-color: #fff;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  html {
+    --review-card-bg-color: #fff;
   }
 }
 
@@ -3165,7 +3174,8 @@ html {
   height: 100%;
   padding: 30px;
   border-radius: 16px;
-  background: #fafafd;
+  background: var(--review-card-bg-color);
+  box-shadow: 0px 20px 60px 10px var(--review-card-shadow);
 }
 .review-card__content {
   display: flex;
@@ -3189,13 +3199,26 @@ html {
 .review-card__avatar {
   width: 80px;
   height: 80px;
+  border-radius: 50%;
   object-fit: cover;
   vertical-align: bottom;
+}
+@media screen and (max-width: 767.98px) {
+  .review-card__avatar {
+    width: 60px;
+    height: 60px;
+  }
 }
 .review-card__title {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 145.455%;
+}
+@media screen and (max-width: 767.98px) {
+  .review-card__title {
+    font-size: 1.8rem;
+    line-height: 144.444%;
+  }
 }
 .review-card__desc {
   margin-top: 10px;
@@ -3246,28 +3269,25 @@ html {
 .text-content h4,
 .text-content h5,
 .text-content h6 {
-  font-weight: 700;
+  font-weight: 600;
 }
 .text-content h1 {
   font-size: 2.6rem;
 }
 .text-content h2 {
-  font-size: 2.4rem;
-}
-.text-content h2:first-child {
-  margin-top: 0;
+  font-size: 2.2rem;
 }
 .text-content h3 {
-  font-size: 2rem;
-}
-.text-content h4 {
   font-size: 1.8rem;
 }
-.text-content h5 {
+.text-content h4 {
   font-size: 1.6rem;
 }
-.text-content h6 {
+.text-content h5 {
   font-size: 1.4rem;
+}
+.text-content h6 {
+  font-size: 1.2rem;
 }
 .text-content h1,
 .text-content h2,
@@ -3817,6 +3837,14 @@ html {
   line-height: 142.857%;
 }
 
+.product-content__container {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.product-content__text-content {
+  margin-top: -20px;
+}
 @media screen and (max-width: 767.98px) {
   .product-content {
     padding: 16px;
@@ -3846,6 +3874,7 @@ html {
 @media screen and (max-width: 767.98px) {
   .product-content__tab-item {
     padding: 6px 20px;
+    font-size: 1.8rem;
   }
 }
 .product-content__tab-item:not(.product-content__tab-item--current) {
@@ -3863,8 +3892,8 @@ html {
 }
 .product-content__heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 141.667%;
 }
 

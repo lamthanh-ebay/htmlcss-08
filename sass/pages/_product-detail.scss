@@ -283,7 +283,16 @@
     }
 }
 
+.product-content__container {
+    background-color: transparent;
+    box-shadow: none;
+}
+
 .product-content {
+    &__text-content {
+        margin-top: -20px;
+    }
+
     @include abstracts.screen(md) {
         padding: 16px;
     }
@@ -312,6 +321,7 @@
 
         @include abstracts.screen(md) {
             padding: 6px 20px;
+            font-size: 1.8rem;
         }
 
         &:not(&--current) {
@@ -336,8 +346,8 @@
     &__heading {
         margin-bottom: 30px;
 
-        font-size: 2.4rem;
-        font-weight: 700;
+        font-size: 2.2rem;
+        font-weight: 600;
         line-height: 141.667%;
     }
 
