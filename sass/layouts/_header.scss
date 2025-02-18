@@ -353,6 +353,12 @@
         border-style: solid;
     }
 
+    &__separate {
+        margin: 20px 0;
+        height: 1px;
+        background-color: var(--act-dropdown-bottom-border-color);
+    }
+
     &__row {
         display: flex;
         align-items: center;
