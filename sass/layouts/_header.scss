@@ -222,6 +222,14 @@
         }
     }
 
+    &__btn-wrap {
+        position: relative;
+
+        &:hover .act-dropdown {
+            display: block;
+        }
+    }
+
     &__btn {
         @extend %flexItemCenter;
 
@@ -281,5 +289,134 @@
 
     &__qnt {
         margin-left: auto;
+    }
+}
+
+// ACT Dropdown
+.act-dropdown {
+    position: absolute;
+    top: 48px;
+    right: -60px;
+    padding: 28px 0 0;
+    display: none;
+
+    &__inner {
+        position: relative;
+        width: min(500px, 100vw);
+        padding: 30px;
+        border-radius: 20px;
+        background-color: var(--act-dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--act-dropdown-shadow);
+    }
+
+    &__arrow {
+        position: absolute;
+        top: -18px;
+        right: 94px;
+        width: 47.75px;
+        filter: var(--dropdown-arrow-filter);
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+        user-select: none;
+    }
+
+    &__see-all {
+        color: #0071dc;
+        font-size: 1.8rem;
+        line-height: 145.455%;
+    }
+
+    &__list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    &__bottom {
+        margin: 20px 0;
+        padding: 20px 0;
+
+        border-width: 1px 0;
+        border-color: var(--act-dropdown-bottom-border-color);
+        border-style: solid;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-weight: 400;
+
+        &--bold {
+            font-weight: 500;
+        }
+    }
+
+    &__row + &__row {
+        margin-top: 12px;
+    }
+
+    &__label,
+    &__value {
+        font-size: 1.8rem;
+        line-height: 145.455%;
+    }
+
+    &__checkout {
+        display: flex;
+        justify-content: flex-end;
+
+        &-btn {
+            min-width: 200px;
+        }
+    }
+}
+
+.act-dropdown-item {
+    text-align: left;
+
+    &__thumb-wrap {
+        position: relative;
+        padding-top: 100%;
+
+        border: 1.5px solid var(--act-dropdown-item-thumb-border-color);
+        border-radius: 10px;
+    }
+
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__title {
+        margin-top: 14px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+    }
+
+    &__price {
+        display: block;
+        margin-top: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
     }
 }
