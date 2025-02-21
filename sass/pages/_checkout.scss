@@ -1,0 +1,32 @@
+@use "../abstracts";
+
+.checkout-page {
+    padding-bottom: 50px;
+
+    background-color: var(--checkout-page-bg-color);
+}
+
+// Checkout-container
+.checkout-container {
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: var(--checkout-container-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--checkout-container-shadow-color);
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
+}
+
+.checkout-breadcrumbs {
+    background-color: var(--checkout-breadcrumbs-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--checkout-breadcrumbs-shadow-color);
+}
+
+// Checkout list
+.checkout__list {
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--checkout-list-bg-color);
+    box-shadow: 0px 20px 60px 10px var(--checkout-list-shadow-color);
+}

@@ -76,6 +76,15 @@ html {
     --review-card-bg-color: #fafafd;
     --review-card-shadow: rgba(237, 237, 246, 0);
 
+    // Checkout page
+    --checkout-page-bg-color: #f6f6f6;
+
+    --checkout-breadcrumbs-bg-color: #fff;
+    --checkout-breadcrumbs-shadow-color: rgba(237, 237, 246, 0.2);
+
+    --checkout-list-bg-color: #fff;
+    --checkout-list-shadow-color: rgba(237, 237, 246, 0.2);
+
     //******** Responsive ********//
     //Header
     @include abstracts.screen(lg) {
