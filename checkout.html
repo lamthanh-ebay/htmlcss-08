@@ -33,7 +33,7 @@
             <div class="container">
                 <!-- Checkout container: Search bar -->
                 <div class="checkout-container d-none d-md-block">
-                    <form action="" class="search-bar">
+                    <form action="" class="search-bar checkout__search-bar">
                         <input type="text" name="" id="" placeholder="Search for item" class="search-bar__input" />
                         <button type="submit" class="search-bar__btn">
                             <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon" />
@@ -61,7 +61,7 @@
                 <div class="checkout-container">
                     <div class="row">
                         <!-- Checkout content Product -->
-                        <div class="col-8">
+                        <div class="col-8 col-lg-12">
                             <div class="checkout-content">
                                 <!-- Checkout list -->
                                 <div class="checkout__list">
@@ -88,7 +88,9 @@
                                                     $47.00 | <span class="checkout-item__status">In Stock</span>
                                                 </p>
 
-                                                <div class="checkout-item__ctrl-wrap">
+                                                <div
+                                                    class="checkout-item__ctrl-wrap checkout-item__ctrl-wrap--md-blook"
+                                                >
                                                     <div class="checkout-item__ctrl">
                                                         <button class="checkout-item__select">
                                                             <span>LavAzza</span>
@@ -167,7 +169,9 @@
                                                     $53.00 | <span class="checkout-item__status">In Stock</span>
                                                 </p>
 
-                                                <div class="checkout-item__ctrl-wrap">
+                                                <div
+                                                    class="checkout-item__ctrl-wrap checkout-item__ctrl-wrap--md-blook"
+                                                >
                                                     <div class="checkout-item__ctrl">
                                                         <button class="checkout-item__select">
                                                             <span>LavAzza</span>
@@ -246,7 +250,9 @@
                                                     $38.65 | <span class="checkout-item__status">In Stock</span>
                                                 </p>
 
-                                                <div class="checkout-item__ctrl-wrap">
+                                                <div
+                                                    class="checkout-item__ctrl-wrap checkout-item__ctrl-wrap--md-blook"
+                                                >
                                                     <div class="checkout-item__ctrl">
                                                         <button class="checkout-item__select">
                                                             <span>LavAzza</span>
@@ -303,11 +309,11 @@
                                     </article>
 
                                     <!-- Checkout bottom -->
-                                    <div class="checkout-bottom">
+                                    <div class="checkout-bottom d-md-none">
                                         <div class="row">
-                                            <div class="col-8">
+                                            <div class="col-7">
                                                 <div class="checkout-continue">
-                                                    <a href="#!" class="checkout-continue__link">
+                                                    <a href="./index-logined.html" class="checkout-continue__link">
                                                         <img
                                                             src="./assets/icons/arrow-down-2.svg"
                                                             alt=""
@@ -317,7 +323,7 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-5">
                                                 <div class="checkout-row">
                                                     <span>Subtotal:</span>
                                                     <span>$191.65</span>
@@ -339,7 +345,7 @@
                         </div>
 
                         <!-- Checkout info -->
-                        <div class="col-4">
+                        <div class="col-4 col-lg-12">
                             <div class="checkout-content">
                                 <div class="checkout-row">
                                     <span>Subtotal <span class="checkout__label--sub">(items)</span></span>
