@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="dark">
+<html lang="vi" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -133,7 +133,10 @@
                                                         />
                                                         <span>Save</span>
                                                     </button>
-                                                    <button class="checkout-item__ctrl-btn">
+                                                    <button
+                                                        class="checkout-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img
                                                             src="./assets/icons/delete.svg"
                                                             alt=""
@@ -214,7 +217,10 @@
                                                         />
                                                         <span>Save</span>
                                                     </button>
-                                                    <button class="checkout-item__ctrl-btn">
+                                                    <button
+                                                        class="checkout-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img
                                                             src="./assets/icons/delete.svg"
                                                             alt=""
@@ -295,7 +301,10 @@
                                                         />
                                                         <span>Save</span>
                                                     </button>
-                                                    <button class="checkout-item__ctrl-btn">
+                                                    <button
+                                                        class="checkout-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
+                                                    >
                                                         <img
                                                             src="./assets/icons/delete.svg"
                                                             alt=""
@@ -394,5 +403,22 @@
         <script>
             load("#footer", "./template/footer.html");
         </script>
+
+        <!-- Dialog -->
+        <div class="dialog hide" id="delete-confirm">
+            <div class="dialog__content">
+                <p class="dialog__text">Lorem ipsum dolor sit amet consectetur?</p>
+                <div class="dialog__ctrl">
+                    <button class="dialog__btn btn btn--text js-toggle" toggle-target="#delete-confirm">Cancel</button>
+                    <button
+                        class="dialog__btn btn btn--primary btn--no-margin js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Confirm
+                    </button>
+                </div>
+            </div>
+            <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
     </body>
 </html>

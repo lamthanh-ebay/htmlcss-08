@@ -93,6 +93,10 @@ html {
     --gift-item-icon-wrap-bg-color: rgba($color: #7644e1, $alpha: 0.1);
     --gift-item-icon-wrap-shadow-color: rgba(237, 237, 246, 0.2);
 
+    // Dialog
+    --dialog-content-bg-color: #fff;
+    --dialog-content-shadow-color: rgba(200, 200, 200, 0.4);
+
     //******** Responsive ********//
     //Header
     @include abstracts.screen(lg) {

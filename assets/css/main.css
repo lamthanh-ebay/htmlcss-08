@@ -1555,6 +1555,8 @@ html.dark {
   --checkout-item-border-color: #292e39;
   --gift-item-icon-wrap-bg-color: #292e39;
   --gift-item-icon-wrap-shadow-color: transparent;
+  --dialog-content-bg-color: #363c4a;
+  --dialog-content-shadow-color: rgba(23, 28, 40, 0.4);
 }
 @media screen and (max-width: 991.98px) {
   html.dark {
@@ -1626,6 +1628,8 @@ html {
   --checkout-item-border-color: #d2d1d6;
   --gift-item-icon-wrap-bg-color: rgba($color: #7644e1, $alpha: 0.1);
   --gift-item-icon-wrap-shadow-color: rgba(237, 237, 246, 0.2);
+  --dialog-content-bg-color: #fff;
+  --dialog-content-shadow-color: rgba(200, 200, 200, 0.4);
 }
 @media screen and (max-width: 991.98px) {
   html {
@@ -2664,6 +2668,7 @@ html {
   background: #f8f8fb;
   font-size: 1.4rem;
   font-weight: 500;
+  white-space: nowrap;
   user-select: none;
 }
 .btn + .btn:not(.btn--no-margin) {
@@ -3643,6 +3648,65 @@ html {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity visibility;
+  transition-duration: 0.2s;
+}
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+.dialog__content {
+  position: relative;
+  z-index: 1;
+  width: min(450px, 100% - 40px);
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--dialog-content-bg-color);
+  box-shadow: 0px 20px 60px 10px var(--dialog-content-shadow-color);
+}
+.dialog__overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.dialog__text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+.dialog__ctrl {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.dialog__btn {
+  min-width: 120px;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 767.98px) {
+  .dialog__content {
+    padding: 20px;
+  }
+  .dialog__ctrl {
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .dialog__btn {
+    flex-grow: 1;
+  }
 }
 
 .home {
