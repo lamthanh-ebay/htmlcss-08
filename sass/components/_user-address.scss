@@ -1,0 +1,90 @@
+.user-address {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 4px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__btn {
+        padding: 0 20px;
+        font-size: 1.8rem;
+
+        &-icon {
+            margin-right: 10px;
+        }
+    }
+}
+
+.user-address-card {
+    display: flex;
+
+    margin-top: 30px;
+
+    &__left {
+        flex-grow: 1;
+
+        display: flex;
+        gap: 16px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 4px;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        margin-top: 20px;
+
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 142.857%;
+
+        &-item {
+            list-style: disc inside;
+            padding-left: 8px;
+        }
+    }
+
+    &__ctrl {
+        height: 100%;
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 144.444%;
+    }
+}

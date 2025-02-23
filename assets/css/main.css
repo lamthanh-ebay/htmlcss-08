@@ -3709,6 +3709,77 @@ html {
   }
 }
 
+.user-address__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-address__heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.user-address__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+}
+.user-address__btn {
+  padding: 0 20px;
+  font-size: 1.8rem;
+}
+.user-address__btn-icon {
+  margin-right: 10px;
+}
+
+.user-address-card {
+  display: flex;
+  margin-top: 30px;
+}
+.user-address-card__left {
+  flex-grow: 1;
+  display: flex;
+  gap: 16px;
+}
+.user-address-card__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.user-address-card__desc {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 146.667%;
+}
+.user-address-card__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.user-address-card__list-item {
+  list-style: disc inside;
+  padding-left: 8px;
+}
+.user-address-card__ctrl {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.user-address-card__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 144.444%;
+}
+
 .home {
   padding-bottom: 50px;
 }
@@ -4409,6 +4480,19 @@ html {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 142.857%;
+}
+
+.checkout__heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+
+.checkout__sub-heading {
+  margin: 30px 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
 }
 
 /*# sourceMappingURL=main.css.map */
