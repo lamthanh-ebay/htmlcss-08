@@ -3713,29 +3713,66 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+@media screen and (max-width: 575.98px) {
+  .user-address__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .user-address__heading {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
-.user-address__desc {
+@media screen and (max-width: 767.98px) {
+  .user-address__heading {
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
+.user-address__message, .user-address__desc {
   margin-top: 4px;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 146.667%;
 }
+@media screen and (max-width: 767.98px) {
+  .user-address__message, .user-address__desc {
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
+}
 .user-address__btn {
   padding: 0 20px;
   font-size: 1.8rem;
 }
+@media screen and (max-width: 767.98px) {
+  .user-address__btn {
+    font-size: 1.6rem;
+  }
+}
 .user-address__btn-icon {
   margin-right: 10px;
+}
+.user-address__message {
+  font-weight: 500;
+}
+.user-address__message-link {
+  color: #0071dc;
+  text-decoration: underline;
 }
 
 .user-address-card {
   display: flex;
+  gap: 16px;
   margin-top: 30px;
+}
+@media screen and (max-width: 575.98px) {
+  .user-address-card {
+    flex-direction: column;
+  }
 }
 .user-address-card__left {
   flex-grow: 1;
@@ -3747,11 +3784,24 @@ html {
   font-weight: 500;
   line-height: 144.444%;
 }
+@media screen and (max-width: 767.98px) {
+  .user-address-card__title {
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
 .user-address-card__desc {
   margin-top: 4px;
+  max-width: 570px;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 146.667%;
+}
+@media screen and (max-width: 767.98px) {
+  .user-address-card__desc {
+    font-size: 1.4rem;
+    line-height: 142.857%;
+  }
 }
 .user-address-card__list {
   display: flex;
@@ -3761,6 +3811,13 @@ html {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 142.857%;
+}
+@media screen and (max-width: 767.98px) {
+  .user-address-card__list {
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
 }
 .user-address-card__list-item {
   list-style: disc inside;
@@ -3778,6 +3835,23 @@ html {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 144.444%;
+}
+@media screen and (max-width: 575.98px) {
+  .user-address-card__checkbox {
+    padding: 6px;
+  }
+}
+.user-address-card__checkbox-input {
+  appearance: none;
+}
+.user-address-card__checkbox-input::before {
+  content: url(../icons/checkbox-uncheck.svg);
+}
+.user-address-card__checkbox-input:not(:checked)::before {
+  filter: var(--icon-color);
+}
+.user-address-card__checkbox-input:checked::before {
+  content: url(../icons/checkbox-checked.svg);
 }
 
 .home {
@@ -4440,6 +4514,11 @@ html {
   margin: 30px 0;
   background-color: var(--checkout-item-border-color);
 }
+@media screen and (max-width: 575.98px) {
+  .checkout-separate {
+    margin: 16px 0;
+  }
+}
 
 .checkout__next-btn {
   margin-top: 30px;
@@ -4487,12 +4566,24 @@ html {
   font-weight: 700;
   line-height: 141.667%;
 }
+@media screen and (max-width: 767.98px) {
+  .checkout__heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}
 
 .checkout__sub-heading {
   margin: 30px 0;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+}
+@media screen and (max-width: 575.98px) {
+  .checkout__sub-heading {
+    margin: 16px 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

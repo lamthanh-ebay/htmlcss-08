@@ -79,6 +79,12 @@
                                         <div class="user-address__top-left">
                                             <h3 class="user-address__heading">Shipping address</h3>
                                             <p class="user-address__desc">Where should we deliver your order?</p>
+
+                                            <!-- Empty Address Message -->
+                                            <!-- <p class="user-address__message">
+                                                Not address yet.&nbsp;
+                                                <a href="#!" class="user-address__message-link">Add a new address.</a>
+                                            </p> -->
                                         </div>
                                         <div class="user-address__top-right">
                                             <button class="user-address__btn btn btn--primary btn--rounded">
@@ -97,7 +103,16 @@
                                         <!-- User address 1 -->
                                         <article class="user-address-card">
                                             <div class="user-address-card__left">
-                                                <div class="user-address-card__chose">Lo</div>
+                                                <div class="user-address-card__chose">
+                                                    <label class="user-address-card__checkbox">
+                                                        <input
+                                                            type="radio"
+                                                            name="user-address"
+                                                            checked
+                                                            class="user-address-card__checkbox-input"
+                                                        />
+                                                    </label>
+                                                </div>
                                                 <div class="user-address-card__info">
                                                     <h3 class="user-address-card__title">Imran Khan</h3>
                                                     <p class="user-address-card__desc">
@@ -117,7 +132,7 @@
                                                         <img
                                                             src="./assets/icons/edit.svg"
                                                             alt=""
-                                                            class="user-address-card__btn-icon"
+                                                            class="user-address-card__btn-icon icon"
                                                         />
                                                         Edit
                                                     </button>
@@ -128,7 +143,15 @@
                                         <!-- User address 2 -->
                                         <article class="user-address-card">
                                             <div class="user-address-card__left">
-                                                <div class="user-address-card__chose">Lo</div>
+                                                <div class="user-address-card__chose">
+                                                    <label class="user-address-card__checkbox">
+                                                        <input
+                                                            type="radio"
+                                                            name="user-address"
+                                                            class="user-address-card__checkbox-input"
+                                                        />
+                                                    </label>
+                                                </div>
                                                 <div class="user-address-card__info">
                                                     <h3 class="user-address-card__title">Imran Khan</h3>
                                                     <p class="user-address-card__desc">
@@ -149,7 +172,7 @@
                                                         <img
                                                             src="./assets/icons/edit.svg"
                                                             alt=""
-                                                            class="user-address-card__btn-icon"
+                                                            class="user-address-card__btn-icon icon"
                                                         />
                                                         Edit
                                                     </button>
@@ -158,6 +181,7 @@
                                         </article>
                                     </div>
                                 </div>
+                                <div class="checkout-separate"></div>
 
                                 <h2 class="checkout__sub-heading">Items details</h2>
 
