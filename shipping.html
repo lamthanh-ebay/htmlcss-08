@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="">
+<html lang="vi" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -553,11 +553,11 @@
         </div>
 
         <!-- Modal: Add a new address -->
-        <div class="modal hide" id="add-new-address">
+        <div class="modal show" id="add-new-address">
             <div class="modal__content" style="--width-modal: 600px">
                 <p class="modal__heading">Add a new address</p>
                 <!-- Modal form -->
-                <form action="" class="form modal__form" autocomplete="off">
+                <form action="" class="form modal__form">
                     <div class="modal__form-body">
                         <!-- Form row -->
                         <div class="form__row modal__form-row">
@@ -640,12 +640,7 @@
                         <button class="modal__btn btn btn--text js-toggle" toggle-target="#add-new-address">
                             Cancel
                         </button>
-                        <button
-                            class="modal__btn btn btn--primary btn--no-margin js-toggle"
-                            toggle-target="#add-new-address"
-                        >
-                            Create
-                        </button>
+                        <button class="modal__btn btn btn--primary btn--no-margin">Create</button>
                     </div>
                 </form>
             </div>

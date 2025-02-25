@@ -12,6 +12,10 @@
             margin-top: 20px;
         }
 
+        @include abstracts.screen(sm) {
+            margin-top: 10px;
+        }
+
         &--inline {
             display: flex;
             align-items: center;
@@ -43,12 +47,16 @@
         padding: 0 12px;
         height: 50px;
 
-        &--small {
-            height: 42px;
-        }
-
         @include abstracts.screen(md) {
             height: 48px;
+        }
+
+        &--small {
+            height: 42px;
+
+            @include abstracts.screen(sm) {
+                height: 42px;
+            }
         }
     }
 
@@ -91,8 +99,9 @@
     &__input,
     &__textarea {
         height: 100%;
+        width: 100%;
 
-        font-size: 1.8rem;
+        font-size: inherit;
         font-weight: 500;
         line-height: 144.444%;
 
@@ -107,7 +116,6 @@
     }
 
     &__textarea {
-        width: 100%;
         resize: none;
     }
 
@@ -218,10 +226,15 @@
         line-height: 145.455%;
 
         &--small {
+            display: block;
             margin-bottom: 10px;
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 142.857%;
+
+            @include abstracts.screen(sm) {
+                margin-bottom: 4px;
+            }
         }
     }
 
