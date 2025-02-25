@@ -83,11 +83,14 @@
                                             <!-- Empty Address Message -->
                                             <!-- <p class="user-address__message">
                                                 Not address yet.&nbsp;
-                                                <a href="#!" class="user-address__message-link">Add a new address.</a>
+                                                <a href="#!" class="user-address__message-link js-toggle"  toggle-target="#add-new-address">Add a new address.</a>
                                             </p> -->
                                         </div>
                                         <div class="user-address__top-right">
-                                            <button class="user-address__btn btn btn--primary btn--rounded">
+                                            <button
+                                                class="user-address__btn btn btn--primary btn--rounded js-toggle"
+                                                toggle-target="#add-new-address"
+                                            >
                                                 <img
                                                     src="./assets/icons/plus.svg"
                                                     alt=""
@@ -128,7 +131,10 @@
                                             </div>
                                             <div class="user-address-card__right">
                                                 <div class="user-address-card__ctrl">
-                                                    <button class="user-address-card__btn">
+                                                    <button
+                                                        class="user-address-card__btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
                                                         <img
                                                             src="./assets/icons/edit.svg"
                                                             alt=""
@@ -168,7 +174,10 @@
                                             </div>
                                             <div class="user-address-card__right">
                                                 <div class="user-address-card__ctrl">
-                                                    <button class="user-address-card__btn">
+                                                    <button
+                                                        class="user-address-card__btn js-toggle"
+                                                        toggle-target="#add-new-address"
+                                                    >
                                                         <img
                                                             src="./assets/icons/edit.svg"
                                                             alt=""
@@ -526,21 +535,121 @@
             load("#footer", "./template/footer.html");
         </script>
 
-        <!-- Dialog -->
-        <div class="dialog hide" id="delete-confirm">
-            <div class="dialog__content">
-                <p class="dialog__text">Lorem ipsum dolor sit amet consectetur?</p>
-                <div class="dialog__ctrl">
-                    <button class="dialog__btn btn btn--text js-toggle" toggle-target="#delete-confirm">Cancel</button>
+        <!-- Modal: Confirm remove shopping item -->
+        <div class="modal hide" id="delete-confirm">
+            <div class="modal__content modal__content--small">
+                <p class="modal__text">Lorem ipsum dolor sit amet consectetur?</p>
+                <div class="modal__ctrl">
+                    <button class="modal__btn btn btn--text js-toggle" toggle-target="#delete-confirm">Cancel</button>
                     <button
-                        class="dialog__btn btn btn--primary btn--no-margin js-toggle"
+                        class="modal__btn btn btn--primary btn--no-margin js-toggle"
                         toggle-target="#delete-confirm"
                     >
                         Confirm
                     </button>
                 </div>
             </div>
-            <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+            <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
+        </div>
+
+        <!-- Modal: Add a new address -->
+        <div class="modal hide" id="add-new-address">
+            <div class="modal__content" style="--width-modal: 600px">
+                <p class="modal__heading">Add a new address</p>
+                <!-- Modal form -->
+                <form action="" class="form modal__form" autocomplete="off">
+                    <div class="modal__form-body">
+                        <!-- Form row -->
+                        <div class="form__row modal__form-row">
+                            <div class="form__group">
+                                <label for="name" class="form__label-prop--small">Name</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        id="name"
+                                        placeholder="Name"
+                                        class="form__input"
+                                        required
+                                        minlength="2"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error-text">Name minimum 2 characters</p>
+                            </div>
+                            <div class="form__group form__group--no-margin">
+                                <label for="phone" class="form__label-prop--small">Phone</label>
+                                <div class="form__text-input form__text-input--small">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        id="phone"
+                                        placeholder="Phone"
+                                        class="form__input"
+                                        required
+                                        pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$"
+                                    />
+                                    <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                                </div>
+                                <p class="form__error-text">Enter the correct phone number format</p>
+                            </div>
+                        </div>
+
+                        <!-- Text arial -->
+                        <div class="form__group">
+                            <label for="address" class="form__label-prop--small">Address</label>
+                            <div class="form__textarea-input">
+                                <textarea
+                                    name="address"
+                                    id="address"
+                                    placeholder="Address"
+                                    class="form__textarea"
+                                    required
+                                ></textarea>
+                            </div>
+                            <p class="form__error-text">Add minimum 2 characters</p>
+                        </div>
+
+                        <!-- City -->
+                        <div class="form__group">
+                            <label for="city" class="form__label-prop--small">City/District</label>
+                            <div class="form__text-input form__text-input--small">
+                                <input
+                                    type="text"
+                                    name="city"
+                                    id="city"
+                                    placeholder="City/District"
+                                    class="form__input"
+                                    required
+                                    minlength="2"
+                                />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+                            </div>
+                            <p class="form__error-text">City/District => Error!</p>
+                        </div>
+                    </div>
+
+                    <div class="form__group form__group--inline">
+                        <label class="form__checkbox-label">
+                            <input type="checkbox" name="" id="" class="form__checkbox-input" hidden />
+                            <span class="form__label">Set as default card</span>
+                        </label>
+                    </div>
+
+                    <div class="modal__ctrl">
+                        <button class="modal__btn btn btn--text js-toggle" toggle-target="#add-new-address">
+                            Cancel
+                        </button>
+                        <button
+                            class="modal__btn btn btn--primary btn--no-margin js-toggle"
+                            toggle-target="#add-new-address"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__overlay"></div>
         </div>
     </body>
 </html>

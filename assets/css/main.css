@@ -3020,33 +3020,44 @@ html {
 .form__group {
   margin-top: 30px;
 }
+.form__group:first-child {
+  margin-top: 0;
+}
 @media screen and (max-width: 767.98px) {
   .form__group {
     margin-top: 20px;
   }
 }
-.form__group:first-child {
-  margin-top: 0;
-}
 .form__group--inline {
   display: flex;
   align-items: center;
 }
+.form__group--no-margin {
+  margin-top: 0;
+}
+.form__textarea-input, .form__text-input {
+  border-radius: 10px;
+  border: 1.5px solid #d2d1d6;
+}
+.form__textarea-input:focus-within, .form__text-input:focus-within {
+  border-color: #77dae6;
+}
+.form__textarea-input {
+  padding: 12px;
+}
 .form__text-input {
   display: flex;
   align-items: center;
-  height: 50px;
   padding: 0 12px;
-  border-radius: 10px;
-  border: 1.5px solid #d2d1d6;
+  height: 50px;
+}
+.form__text-input--small {
+  height: 42px;
 }
 @media screen and (max-width: 767.98px) {
   .form__text-input {
     height: 48px;
   }
-}
-.form__text-input:focus-within {
-  border-color: #77dae6;
 }
 .form__error-text {
   margin-top: 10px;
@@ -3077,21 +3088,27 @@ html {
   opacity: 0.5;
   pointer-events: none;
 }
-.form__input {
+.form__input, .form__textarea {
   height: 100%;
-  flex: 1;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
 @media screen and (max-width: 767.98px) {
-  .form__input {
+  .form__input, .form__textarea {
     font-size: 1.6rem;
     line-height: 150%;
   }
 }
-.form__input::placeholder {
+.form__input::placeholder, .form__textarea::placeholder {
   color: var(--form-input-placeholder-color);
+}
+.form__textarea {
+  width: 100%;
+  resize: none;
+}
+.form__input {
+  flex: 1;
 }
 .form__input-icon {
   margin-left: 12px;
@@ -3176,6 +3193,7 @@ html {
 .form__label-prop--small {
   margin-bottom: 10px;
   font-size: 1.4rem;
+  font-weight: 500;
   line-height: 142.857%;
 }
 .form__select-prop-wrap {
@@ -3650,7 +3668,7 @@ html {
   line-height: 150%;
 }
 
-.dialog {
+.modal {
   position: fixed;
   inset: 0;
   z-index: 99;
@@ -3662,29 +3680,37 @@ html {
   transition: opacity visibility;
   transition-duration: 0.2s;
 }
-.dialog.show {
+.modal.show {
   opacity: 1;
   visibility: visible;
 }
-.dialog__content {
+.modal__content {
   position: relative;
   z-index: 1;
-  width: min(450px, 100% - 40px);
+  width: min(var(--width-modal, 800px), 100% - 40px);
   padding: 30px;
   border-radius: 20px;
   background-color: var(--dialog-content-bg-color);
   box-shadow: 0px 20px 60px 10px var(--dialog-content-shadow-color);
 }
-.dialog__overlay {
+.modal__content--small {
+  --width-modal: 400px;
+}
+.modal__overlay {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.dialog__text {
+.modal__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+.modal__text {
   font-size: 1.8rem;
   line-height: 1.6;
 }
-.dialog__ctrl {
+.modal__ctrl {
   margin-top: 30px;
   display: flex;
   align-items: center;
@@ -3692,21 +3718,34 @@ html {
   flex-wrap: wrap;
   gap: 30px;
 }
-.dialog__btn {
+.modal__btn {
   min-width: 120px;
   font-size: 1.8rem;
 }
 @media screen and (max-width: 767.98px) {
-  .dialog__content {
+  .modal__content {
     padding: 20px;
   }
-  .dialog__ctrl {
+  .modal__ctrl {
     margin-top: 20px;
     gap: 20px;
   }
-  .dialog__btn {
+  .modal__btn {
     flex-grow: 1;
   }
+}
+.modal__form {
+  margin-top: 30px;
+}
+.modal__form-body {
+  max-height: calc(100vh - 266px);
+  overflow-y: auto;
+}
+.modal__form-row {
+  gap: 30px;
+}
+.modal__form-row > * {
+  flex: 1;
 }
 
 .user-address__top {
