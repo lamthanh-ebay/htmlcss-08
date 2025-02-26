@@ -137,6 +137,13 @@
         }
     }
 
+    &__form-heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+        padding: 13px 0;
+    }
+
     &__form-search {
         flex-shrink: 0;
 
@@ -146,6 +153,14 @@
         @include abstracts.screen(lg) {
             padding: 0 20px 0;
             height: 42px;
+        }
+
+        @include abstracts.screen(sm) {
+            margin: 0 20px;
+            padding: 0 14px 0;
+
+            border: 1px solid #d2d1d6;
+            border-radius: 10px;
         }
 
         &-icon {

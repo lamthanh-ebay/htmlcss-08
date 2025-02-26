@@ -553,7 +553,7 @@
         </div>
 
         <!-- Modal: Add a new address -->
-        <div class="modal hide" id="add-new-address">
+        <div class="modal show" id="add-new-address">
             <div class="modal__content" style="--width-modal: 600px">
                 <p class="modal__heading">Add a new address</p>
                 <!-- Modal form -->
@@ -627,7 +627,8 @@
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
 
                                 <!-- Form Select Option -->
-                                <div id="modal__form-select" class="form__select modal__form-select hide">
+                                <div id="modal__form-select" class="form__select modal__form-select show">
+                                    <p class="modal__form-heading d-none d-sm-block">City/District</p>
                                     <button
                                         class="form__select-modal-close d-none d-sm-block js-toggle"
                                         toggle-target="#modal__form-select"
