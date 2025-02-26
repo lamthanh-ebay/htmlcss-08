@@ -138,12 +138,18 @@
     }
 
     &__form-search {
+        flex-shrink: 0;
+
         padding: 0px 20px 10px;
         border-bottom: 1px solid #d2d1d6;
 
+        @include abstracts.screen(lg) {
+            padding: 0 20px 0;
+            height: 42px;
+        }
+
         &-icon {
             width: 16px;
-            height: 16px;
             object-fit: contain;
         }
     }

@@ -553,7 +553,7 @@
         </div>
 
         <!-- Modal: Add a new address -->
-        <div class="modal show" id="add-new-address">
+        <div class="modal hide" id="add-new-address">
             <div class="modal__content" style="--width-modal: 600px">
                 <p class="modal__heading">Add a new address</p>
                 <!-- Modal form -->
@@ -628,6 +628,12 @@
 
                                 <!-- Form Select Option -->
                                 <div id="modal__form-select" class="form__select modal__form-select hide">
+                                    <button
+                                        class="form__select-modal-close d-none d-sm-block js-toggle"
+                                        toggle-target="#modal__form-select"
+                                    >
+                                        &times;
+                                    </button>
                                     <div class="form__search modal__form-search">
                                         <input
                                             type="text"
@@ -639,7 +645,7 @@
                                         <img
                                             src="./assets/icons/search.svg"
                                             alt=""
-                                            class="form__search-icon modal__form-search-icon"
+                                            class="form__search-icon modal__form-search-icon icon"
                                         />
                                     </div>
                                     <ul class="form__option-list">
