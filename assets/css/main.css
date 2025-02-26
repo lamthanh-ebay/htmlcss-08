@@ -1561,7 +1561,7 @@ html.dark {
   --review-card-bg-color: #171c28;
   --review-card-shadow: rgba(0, 0, 0, 0.2);
   --checkout-page-bg-color: #292e39;
-  --checkout-search-bar-bg-color: #fff;
+  --checkout-search-bar-bg-color: #171c28;
   --checkout-breadcrumbs-bg-color: #171c28;
   --checkout-breadcrumbs-shadow-color: rgba(23, 28, 40, 0.2);
   --checkout-list-bg-color: #171c28;
@@ -3037,16 +3037,6 @@ html {
 .form__group:first-child {
   margin-top: 0;
 }
-@media screen and (max-width: 767.98px) {
-  .form__group {
-    margin-top: 20px;
-  }
-}
-@media screen and (max-width: 575.98px) {
-  .form__group {
-    margin-top: 10px;
-  }
-}
 .form__group--inline {
   display: flex;
   align-items: center;
@@ -3065,6 +3055,7 @@ html {
   padding: 12px;
 }
 .form__text-input {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 0 12px;
@@ -3287,6 +3278,52 @@ html {
 }
 .form__tag-prop:hover {
   color: var(--text-color);
+}
+.form__search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__search-input {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.form__search-input::placeholder {
+  font-weight: 400;
+}
+.form__search-icon {
+  cursor: pointer;
+}
+.form__select {
+  position: absolute;
+  bottom: 44px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+  max-height: 250px;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #d2d1d6;
+  background-color: #fff;
+}
+.form__option-list {
+  flex: 1;
+  margin-top: 8px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+}
+.form__option {
+  padding: 8px 20px;
+  font-size: 1.4rem;
+}
+.form__option--current {
+  font-weight: 500;
+  background-color: rgba(255, 183, 0, 0.5);
+}
+.form__option:not(.form__option--current):hover {
+  background-color: #ebebeb;
+  cursor: pointer;
 }
 
 .message {
@@ -3810,6 +3847,27 @@ html {
     flex-direction: column;
     gap: 10px;
   }
+}
+.modal__form-select {
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 10px;
+  transition: opacity, visibility, translate;
+  transition-duration: 0.2s;
+}
+.modal__form-select.show {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
+}
+.modal__form-search {
+  padding: 0px 20px 10px;
+  border-bottom: 1px solid #d2d1d6;
+}
+.modal__form-search-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 .user-address__top {
@@ -4519,7 +4577,6 @@ html {
 }
 .checkout-page {
   padding-bottom: 50px;
-  background-color: var(--checkout-page-bg-color);
 }
 
 .checkout-container {

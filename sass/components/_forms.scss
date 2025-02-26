@@ -8,13 +8,13 @@
             margin-top: 0;
         }
 
-        @include abstracts.screen(md) {
-            margin-top: 20px;
-        }
+        // @include abstracts.screen(md) {
+        //     margin-top: 20px;
+        // }
 
-        @include abstracts.screen(sm) {
-            margin-top: 10px;
-        }
+        // @include abstracts.screen(sm) {
+        //     margin-top: 10px;
+        // }
 
         &--inline {
             display: flex;
@@ -42,6 +42,7 @@
     }
 
     &__text-input {
+        position: relative;
         display: flex;
         align-items: center;
         padding: 0 12px;
@@ -306,4 +307,66 @@
         }
     }
     // END: Form Prop
+
+    // Form Search
+    &__search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-input {
+            font-size: 1.6rem;
+            font-weight: 500;
+
+            &::placeholder {
+                font-weight: 400;
+            }
+        }
+
+        &-icon {
+            cursor: pointer;
+        }
+    }
+
+    // Form Select Option
+    &__select {
+        position: absolute;
+        bottom: 44px;
+        left: 10px;
+
+        display: flex;
+        flex-direction: column;
+
+        min-width: 230px;
+        max-height: 250px;
+        padding: 10px 0;
+        border-radius: 10px;
+
+        border: 1px solid #d2d1d6;
+        background-color: #fff;
+    }
+
+    &__option-list {
+        flex: 1;
+
+        margin-top: 8px;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+    }
+
+    &__option {
+        padding: 8px 20px;
+
+        font-size: 1.4rem;
+
+        &--current {
+            font-weight: 500;
+            background-color: rgba($color: #ffb700, $alpha: 0.5);
+        }
+
+        &:not(&--current):hover {
+            background-color: #ebebeb;
+            cursor: pointer;
+        }
+    }
 }

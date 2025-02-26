@@ -121,4 +121,30 @@
             gap: 10px;
         }
     }
+
+    &__form-select {
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 10px;
+
+        transition: opacity, visibility, translate;
+        transition-duration: 0.2s;
+
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+
+    &__form-search {
+        padding: 0px 20px 10px;
+        border-bottom: 1px solid #d2d1d6;
+
+        &-icon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+        }
+    }
 }

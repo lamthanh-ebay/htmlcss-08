@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="dark">
+<html lang="vi" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -619,11 +619,72 @@
                                     name="city"
                                     id="city"
                                     placeholder="City/District"
-                                    class="form__input"
+                                    class="form__input js-toggle"
+                                    toggle-target="#modal__form-select"
                                     required
                                     minlength="2"
                                 />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input-icon-error" />
+
+                                <!-- Form Select Option -->
+                                <div id="modal__form-select" class="form__select modal__form-select hide">
+                                    <div class="form__search modal__form-search">
+                                        <input
+                                            type="text"
+                                            name=""
+                                            id=""
+                                            placeholder="Search"
+                                            class="form__search-input"
+                                        />
+                                        <img
+                                            src="./assets/icons/search.svg"
+                                            alt=""
+                                            class="form__search-icon modal__form-search-icon"
+                                        />
+                                    </div>
+                                    <ul class="form__option-list">
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ho Chi Minh</li>
+                                        <li class="form__option form__option--current">Da Nang</li>
+                                        <li class="form__option">Thai Nguyen</li>
+                                        <li class="form__option">Dong Nai</li>
+                                        <li class="form__option">Binh Duong</li>
+                                        <li class="form__option">Ca Mau</li>
+                                        <li class="form__option">Vung Tau</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ho Chi Minh</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Thai Nguyen</li>
+                                        <li class="form__option">Dong Nai</li>
+                                        <li class="form__option">Binh Duong</li>
+                                        <li class="form__option">Ca Mau</li>
+                                        <li class="form__option">Vung Tau</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ho Chi Minh</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Thai Nguyen</li>
+                                        <li class="form__option">Dong Nai</li>
+                                        <li class="form__option">Binh Duong</li>
+                                        <li class="form__option">Ca Mau</li>
+                                        <li class="form__option">Vung Tau</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ho Chi Minh</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Thai Nguyen</li>
+                                        <li class="form__option">Dong Nai</li>
+                                        <li class="form__option">Binh Duong</li>
+                                        <li class="form__option">Ca Mau</li>
+                                        <li class="form__option">Vung Tau</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ho Chi Minh</li>
+                                        <li class="form__option">Da Nang</li>
+                                        <li class="form__option">Thai Nguyen</li>
+                                        <li class="form__option">Dong Nai</li>
+                                        <li class="form__option">Binh Duong</li>
+                                        <li class="form__option">Ca Mau</li>
+                                        <li class="form__option">Vung Tau</li>
+                                    </ul>
+                                </div>
                             </div>
                             <p class="form__error-text">City/District => Error!</p>
                         </div>
