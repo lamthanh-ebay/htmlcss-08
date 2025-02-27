@@ -133,36 +133,7 @@
         align-items: flex-end;
     }
 
-    &__btn {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+    // .checkout-card__btn => checkout.scss
 
-        font-size: 1.8rem;
-        font-weight: 400;
-        line-height: 144.444%;
-    }
-
-    // Checkbox
-    &__checkbox {
-        @include abstracts.screen(sm) {
-            padding: 6px;
-        }
-    }
-
-    &__checkbox-input {
-        appearance: none;
-
-        &::before {
-            content: url(../icons/checkbox-uncheck.svg);
-        }
-
-        &:not(:checked)::before {
-            filter: var(--icon-color);
-        }
-
-        &:checked::before {
-            content: url(../icons/checkbox-checked.svg);
-        }
-    }
+    // Checkbox => checkout.scss
 }
