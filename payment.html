@@ -133,7 +133,7 @@
                                                 type="radio"
                                                 name="delivery-method"
                                                 checked
-                                                class="checkout-card__checkbox-input payment-item__chekbox-input"
+                                                class="checkout-card__checkbox-input payment-item__checkbox-input"
                                             />
                                             <span class="payment-item__cost">Free</span>
                                         </span>
@@ -159,7 +159,7 @@
                                             <input
                                                 type="radio"
                                                 name="delivery-method"
-                                                class="checkout-card__checkbox-input payment-item__chekbox-input"
+                                                class="checkout-card__checkbox-input payment-item__checkbox-input"
                                             />
                                             <span class="payment-item__cost">$12.00</span>
                                         </span>
@@ -172,6 +172,121 @@
                         <div class="col-4 col-lg-12">
                             <div class="checkout-content">
                                 <h2 class="checkout__heading">Payment Details</h2>
+                                <p class="payment-item__desc">
+                                    Complete your purchase item by providing your payment details order.
+                                </p>
+
+                                <!-- Form payment-form -->
+                                <form action="" class="form payment-form">
+                                    <div class="form__group">
+                                        <label for="email" class="form__label-prop form__label-prop--medium">
+                                            Email Address
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                id="email"
+                                                placeholder="Email"
+                                                class="form__input"
+                                                required
+                                                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error-text">Email is not in correct format</p>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <label for="card-holder" class="form__label-prop form__label-prop--medium">
+                                            Card Holder
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="text"
+                                                name="card-holder"
+                                                id="card-holder"
+                                                placeholder="Card Holder"
+                                                class="form__input"
+                                                required
+                                                minlength="2"
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error-text">Card Holder must be at least 2 characters</p>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <label for="card-details" class="form__label-prop form__label-prop--medium">
+                                            Card Details
+                                        </label>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="text"
+                                                name="card-details"
+                                                id="card-details"
+                                                placeholder="Card Details"
+                                                class="form__input"
+                                                required
+                                            />
+                                            <img
+                                                src="./assets/icons/form-error.svg"
+                                                alt=""
+                                                class="form__input-icon-error"
+                                            />
+                                        </div>
+                                        <p class="form__error-text">Card Details is not in correct format</p>
+                                    </div>
+
+                                    <div class="form__row payment-form__row">
+                                        <div class="form__group">
+                                            <div class="form__text-input">
+                                                <input
+                                                    type="text"
+                                                    name="card-expiry"
+                                                    id="card-expiry"
+                                                    placeholder="MM/YY"
+                                                    class="form__input"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon-error"
+                                                />
+                                            </div>
+                                            <p class="form__error-text">Card Expiry is not in correct format</p>
+                                        </div>
+
+                                        <div class="form__group form__group--no-margin">
+                                            <div class="form__text-input">
+                                                <input
+                                                    type="text"
+                                                    name="card-cvc"
+                                                    id="card-cvc"
+                                                    placeholder="CVC"
+                                                    class="form__input"
+                                                    required
+                                                />
+                                                <img
+                                                    src="./assets/icons/form-error.svg"
+                                                    alt=""
+                                                    class="form__input-icon-error"
+                                                />
+                                            </div>
+                                            <p class="form__error-text">Card CVC is not in correct format</p>
+                                        </div>
+                                    </div>
+                                </form>
+
                                 <div class="checkout-row">
                                     <span>Subtotal <span class="checkout__label--sub">(items)</span></span>
                                     <span>3</span>
@@ -189,9 +304,7 @@
                                     <span>Estimated Total</span>
                                     <span>$201.65</span>
                                 </div>
-                                <a href="#!" class="checkout__next-btn btn btn--primary btn--rounded">
-                                    Continue to checkout
-                                </a>
+                                <a href="#!" class="checkout__next-btn btn btn--primary btn--rounded">Pay $201.65</a>
                             </div>
                             <div class="checkout-content">
                                 <a href="#!">

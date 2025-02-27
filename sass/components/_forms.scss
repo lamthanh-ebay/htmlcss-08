@@ -209,6 +209,7 @@
     // BEGIN: Form Prop
     &__row {
         display: flex;
+        align-items: center;
     }
 
     &__group-prop {
@@ -227,6 +228,13 @@
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 145.455%;
+
+        &--medium {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
 
         &--small {
             display: block;
