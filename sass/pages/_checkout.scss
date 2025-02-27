@@ -98,6 +98,11 @@
     align-items: center;
     justify-content: space-between;
 
+    @include abstracts.screen(md) {
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+
     & + & {
         margin-top: 10px;
     }
@@ -114,6 +119,18 @@
         @include abstracts.screen(lg) {
             font-size: 2.2rem;
         }
+
+        @include abstracts.screen(md) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.checkout__label--sub {
+    font-weight: 400;
+
+    @include abstracts.screen(md) {
+        font-weight: 400;
     }
 }
 
@@ -144,6 +161,10 @@
     margin: 30px 0;
     background-color: var(--checkout-item-border-color);
 
+    @include abstracts.screen(md) {
+        margin: 20px 0;
+    }
+
     @include abstracts.screen(sm) {
         margin: 16px 0;
     }
@@ -157,10 +178,6 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 145.455%;
-}
-
-.checkout__label--sub {
-    font-weight: 400;
 }
 
 .gift-item {
@@ -215,6 +232,12 @@
     font-weight: 500;
     line-height: 144.444%;
 
+    @include abstracts.screen(md) {
+        margin: 20px 0;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
+
     @include abstracts.screen(sm) {
         margin: 16px 0;
     }
@@ -224,6 +247,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .payment-item {
@@ -234,8 +258,16 @@
     margin-top: 30px;
     padding: 20px;
     border-radius: 20px;
-    background: #f6f6f6;
+    background: var(--payment-item-bg-color);
     cursor: pointer;
+
+    @include abstracts.screen(md) {
+        margin-top: 20px;
+    }
+
+    @include abstracts.screen(sm) {
+        align-items: flex-start;
+    }
 
     &__thum {
         width: 70px;
@@ -245,12 +277,29 @@
 
     &__content {
         flex: 1;
+
+        display: flex;
+        align-items: center;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__info {
+        flex: 1;
     }
 
     &__heading {
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
     }
 
     &__desc,
@@ -258,6 +307,12 @@
         font-size: 1.5rem;
         font-weight: 400;
         line-height: 146.667%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 142.857%;
+        }
     }
 
     &__desc {
@@ -280,6 +335,14 @@
         align-items: center;
         flex-direction: row-reverse;
         gap: 14px;
+
+        margin-right: -6px;
+
+        @include abstracts.screen(sm) {
+            margin: 0 0 -6px -6px;
+
+            padding-top: 16px;
+        }
     }
 
     &__cost {
@@ -290,12 +353,16 @@
     }
 
     &__checkbox-input:checked ~ &__cost {
-        color: #1a162e;
+        color: var(--text-color);
     }
 }
 
 .payment-form {
     margin: 30px 0;
+
+    @include abstracts.screen(md) {
+        margin: 20px 0;
+    }
     &__row {
         gap: 20px;
         margin-top: 30px;

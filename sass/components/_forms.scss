@@ -10,9 +10,10 @@
             margin-top: 0;
         }
 
-        // @include abstracts.screen(md) {
-        //     margin-top: 20px;
-        // }
+        @include abstracts.screen(md) {
+            flex: 1;
+            margin-top: 20px;
+        }
 
         // @include abstracts.screen(sm) {
         //     margin-top: 10px;
@@ -234,6 +235,13 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;
+
+            @include abstracts.screen(md) {
+                margin-bottom: 10px;
+
+                font-size: 1.6rem;
+                line-height: 150%;
+            }
         }
 
         &--small {

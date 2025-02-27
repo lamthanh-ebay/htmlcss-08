@@ -92,7 +92,7 @@
 
                                 <!-- Payment item 1 -->
                                 <article class="payment-item">
-                                    <div class="payment-item__content">
+                                    <div class="payment-item__info">
                                         <h3 class="payment-item__heading">Imran Khan</h3>
                                         <p class="payment-item__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
                                     </div>
@@ -100,7 +100,7 @@
 
                                 <!-- Payment item 2 -->
                                 <article class="payment-item">
-                                    <div class="payment-item__content">
+                                    <div class="payment-item__info">
                                         <h3 class="payment-item__heading">Items details</h3>
                                         <p class="payment-item__desc">2 items</p>
                                     </div>
@@ -122,21 +122,24 @@
                                             class="payment-item__thum"
                                         />
                                         <div class="payment-item__content">
-                                            <h3 class="payment-item__heading">Fedex Delivery</h3>
-                                            <p class="payment-item__desc payment-item__desc--low">
-                                                Delivery: 2-3 days work
-                                            </p>
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__heading">Fedex Delivery</h3>
+                                                <p class="payment-item__desc payment-item__desc--low">
+                                                    Delivery: 2-3 days work
+                                                </p>
+                                            </div>
+
+                                            <!-- Check box -->
+                                            <span class="checkout-card__checkbox payment-item__cost-wrap">
+                                                <input
+                                                    type="radio"
+                                                    name="delivery-method"
+                                                    checked
+                                                    class="checkout-card__checkbox-input payment-item__checkbox-input"
+                                                />
+                                                <span class="payment-item__cost">Free</span>
+                                            </span>
                                         </div>
-                                        <!-- Check box -->
-                                        <span class="checkout-card__checkbox payment-item__cost-wrap">
-                                            <input
-                                                type="radio"
-                                                name="delivery-method"
-                                                checked
-                                                class="checkout-card__checkbox-input payment-item__checkbox-input"
-                                            />
-                                            <span class="payment-item__cost">Free</span>
-                                        </span>
                                     </article>
                                 </label>
 
@@ -149,20 +152,23 @@
                                             class="payment-item__thum"
                                         />
                                         <div class="payment-item__content">
-                                            <h3 class="payment-item__heading">DHL Delivery</h3>
-                                            <p class="payment-item__desc payment-item__desc--low">
-                                                Delivery: 2-3 days work
-                                            </p>
+                                            <div class="payment-item__info">
+                                                <h3 class="payment-item__heading">DHL Delivery</h3>
+                                                <p class="payment-item__desc payment-item__desc--low">
+                                                    Delivery: 2-3 days work
+                                                </p>
+                                            </div>
+
+                                            <!-- Check box -->
+                                            <span class="checkout-card__checkbox payment-item__cost-wrap">
+                                                <input
+                                                    type="radio"
+                                                    name="delivery-method"
+                                                    class="checkout-card__checkbox-input payment-item__checkbox-input"
+                                                />
+                                                <span class="payment-item__cost">$12.00</span>
+                                            </span>
                                         </div>
-                                        <!-- Check box -->
-                                        <span class="checkout-card__checkbox payment-item__cost-wrap">
-                                            <input
-                                                type="radio"
-                                                name="delivery-method"
-                                                class="checkout-card__checkbox-input payment-item__checkbox-input"
-                                            />
-                                            <span class="payment-item__cost">$12.00</span>
-                                        </span>
                                     </article>
                                 </label>
                             </div>

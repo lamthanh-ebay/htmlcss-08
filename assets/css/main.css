@@ -1570,6 +1570,7 @@ html.dark {
   --checkout-list-bg-color: #171c28;
   --checkout-list-shadow-color: rgba(23, 28, 40, 0.2);
   --checkout-item-border-color: #292e39;
+  --payment-item-bg-color: #292e39;
   --gift-item-icon-wrap-bg-color: #292e39;
   --gift-item-icon-wrap-shadow-color: transparent;
   --dialog-content-bg-color: #363c4a;
@@ -1646,6 +1647,7 @@ html {
   --checkout-list-bg-color: #fff;
   --checkout-list-shadow-color: rgba(237, 237, 246, 0.2);
   --checkout-item-border-color: #d2d1d6;
+  --payment-item-bg-color: #f6f6f6;
   --gift-item-icon-wrap-bg-color: rgba($color: #7644e1, $alpha: 0.1);
   --gift-item-icon-wrap-shadow-color: rgba(237, 237, 246, 0.2);
   --dialog-content-bg-color: #fff;
@@ -3049,6 +3051,12 @@ html {
 .form__group:first-child {
   margin-top: 0;
 }
+@media screen and (max-width: 767.98px) {
+  .form__group {
+    flex: 1;
+    margin-top: 20px;
+  }
+}
 .form__group--inline {
   display: flex;
   align-items: center;
@@ -3223,6 +3231,13 @@ html {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+}
+@media screen and (max-width: 767.98px) {
+  .form__label-prop--medium {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
 }
 .form__label-prop--small {
   display: block;
@@ -4722,6 +4737,12 @@ html {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 767.98px) {
+  .checkout-row {
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
 .checkout-row + .checkout-row {
   margin-top: 10px;
 }
@@ -4738,6 +4759,20 @@ html {
 @media screen and (max-width: 991.98px) {
   .checkout-row--bold {
     font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .checkout-row--bold {
+    font-size: 1.8rem;
+  }
+}
+
+.checkout__label--sub {
+  font-weight: 400;
+}
+@media screen and (max-width: 767.98px) {
+  .checkout__label--sub {
+    font-weight: 400;
   }
 }
 
@@ -4764,6 +4799,11 @@ html {
   margin: 30px 0;
   background-color: var(--checkout-item-border-color);
 }
+@media screen and (max-width: 767.98px) {
+  .checkout-separate {
+    margin: 20px 0;
+  }
+}
 @media screen and (max-width: 575.98px) {
   .checkout-separate {
     margin: 16px 0;
@@ -4777,10 +4817,6 @@ html {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 145.455%;
-}
-
-.checkout__label--sub {
-  font-weight: 400;
 }
 
 .gift-item {
@@ -4830,6 +4866,13 @@ html {
   font-weight: 500;
   line-height: 144.444%;
 }
+@media screen and (max-width: 767.98px) {
+  .checkout__sub-heading {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    line-height: 146.667%;
+  }
+}
 @media screen and (max-width: 575.98px) {
   .checkout__sub-heading {
     margin: 16px 0;
@@ -4840,6 +4883,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .payment-item {
@@ -4849,8 +4893,18 @@ html {
   margin-top: 30px;
   padding: 20px;
   border-radius: 20px;
-  background: #f6f6f6;
+  background: var(--payment-item-bg-color);
   cursor: pointer;
+}
+@media screen and (max-width: 767.98px) {
+  .payment-item {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .payment-item {
+    align-items: flex-start;
+  }
 }
 .payment-item__thum {
   width: 70px;
@@ -4859,16 +4913,40 @@ html {
 }
 .payment-item__content {
   flex: 1;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 575.98px) {
+  .payment-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.payment-item__info {
+  flex: 1;
 }
 .payment-item__heading {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
+@media screen and (max-width: 767.98px) {
+  .payment-item__heading {
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
 .payment-item__desc, .payment-item__link {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 146.667%;
+}
+@media screen and (max-width: 767.98px) {
+  .payment-item__desc, .payment-item__link {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
 }
 .payment-item__desc {
   margin-top: 4px;
@@ -4887,6 +4965,13 @@ html {
   align-items: center;
   flex-direction: row-reverse;
   gap: 14px;
+  margin-right: -6px;
+}
+@media screen and (max-width: 575.98px) {
+  .payment-item__cost-wrap {
+    margin: 0 0 -6px -6px;
+    padding-top: 16px;
+  }
 }
 .payment-item__cost {
   font-size: 1.8rem;
@@ -4895,11 +4980,16 @@ html {
   color: #9e9da8;
 }
 .payment-item__checkbox-input:checked ~ .payment-item__cost {
-  color: #1a162e;
+  color: var(--text-color);
 }
 
 .payment-form {
   margin: 30px 0;
+}
+@media screen and (max-width: 767.98px) {
+  .payment-form {
+    margin: 20px 0;
+  }
 }
 .payment-form__row {
   gap: 20px;
