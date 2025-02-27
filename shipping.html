@@ -538,14 +538,16 @@
         <!-- Modal: Confirm remove shopping item -->
         <div class="modal hide" id="delete-confirm">
             <div class="modal__content modal__content--small">
-                <p class="modal__text">Lorem ipsum dolor sit amet consectetur?</p>
+                <p class="modal__text">You want to remove this item from your shopping cart?</p>
                 <div class="modal__ctrl">
-                    <button class="modal__btn btn btn--text js-toggle" toggle-target="#delete-confirm">Cancel</button>
+                    <button class="modal__btn btn btn--outline js-toggle" toggle-target="#delete-confirm">
+                        Cancel
+                    </button>
                     <button
-                        class="modal__btn btn btn--primary btn--no-margin js-toggle"
+                        class="modal__btn btn btn--wanning btn--no-margin js-toggle"
                         toggle-target="#delete-confirm"
                     >
-                        Confirm
+                        Delete
                     </button>
                 </div>
             </div>
@@ -619,6 +621,7 @@
                                     name="city"
                                     id="city"
                                     placeholder="City/District"
+                                    readonly
                                     class="form__input js-toggle"
                                     toggle-target="#modal__form-select"
                                     required

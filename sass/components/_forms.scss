@@ -1,6 +1,8 @@
 @use "../abstracts";
 
 .form {
+    $error-color: #ed4337;
+
     &__group {
         margin-top: 30px;
 
@@ -65,7 +67,7 @@
     &__error-text {
         margin-top: 10px;
         text-align: left;
-        color: red;
+        color: $error-color;
         font-size: 1.4rem;
         font-weight: 500;
         display: none;
@@ -79,8 +81,8 @@
     }
 
     &__text-input:has(:invalid):has(&__input:not(:placeholder-shown)) {
-        border-color: red;
-        background-color: rgba($color: red, $alpha: 0.1);
+        border-color: $error-color;
+        background-color: rgba($color: $error-color, $alpha: 0.1);
 
         ~ .form__error-text,
         .form__input-icon-error {
@@ -370,7 +372,7 @@
             top: 0;
             right: 0;
             z-index: 2;
-            padding: 1px 12px;
+            padding: 22px 20px;
             opacity: 0.7;
         }
     }
@@ -381,6 +383,11 @@
         margin-top: 8px;
         overflow-y: auto;
         overscroll-behavior-y: contain;
+
+        // Hỗ trợ 100vh trên ios
+        @supports (-webkit-touch-callout: none) {
+            padding-bottom: 260px;
+        }
     }
 
     &__option {
@@ -390,6 +397,11 @@
 
         @include abstracts.screen(lg) {
             padding: 14px 20px;
+        }
+
+        @include abstracts.screen(sm) {
+            padding: 20px 30px;
+            font-size: 1.6rem;
         }
 
         &--current {

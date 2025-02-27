@@ -1693,6 +1693,8 @@ html {
 }
 
 .header {
+  position: relative;
+  z-index: 2;
   background-color: var(--header-bg-color);
 }
 @media screen and (max-width: 991.98px) {
@@ -2703,6 +2705,10 @@ html {
   color: #1a162e;
   background: #ffb700;
 }
+.btn--wanning {
+  color: #fff;
+  background: #ed4337;
+}
 .btn--outline {
   border: 1px solid #d2d1d6;
   background: transparent;
@@ -3083,7 +3089,7 @@ html {
 .form__error-text {
   margin-top: 10px;
   text-align: left;
-  color: red;
+  color: #ed4337;
   font-size: 1.4rem;
   font-weight: 500;
   display: none;
@@ -3095,8 +3101,8 @@ html {
   animation: shake 0.5s;
 }
 .form__text-input:has(:invalid):has(.form__input:not(:placeholder-shown)) {
-  border-color: red;
-  background-color: rgba(255, 0, 0, 0.1);
+  border-color: #ed4337;
+  background-color: rgba(237, 67, 55, 0.1);
 }
 .form__text-input:has(:invalid):has(.form__input:not(:placeholder-shown)) ~ .form__error-text,
 .form__text-input:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon-error {
@@ -3339,7 +3345,7 @@ html {
   top: 0;
   right: 0;
   z-index: 2;
-  padding: 1px 12px;
+  padding: 22px 20px;
   opacity: 0.7;
 }
 .form__option-list {
@@ -3348,6 +3354,11 @@ html {
   overflow-y: auto;
   overscroll-behavior-y: contain;
 }
+@supports (-webkit-touch-callout: none) {
+  .form__option-list {
+    padding-bottom: 260px;
+  }
+}
 .form__option {
   padding: 8px 20px;
   font-size: 1.4rem;
@@ -3355,6 +3366,12 @@ html {
 @media screen and (max-width: 991.98px) {
   .form__option {
     padding: 14px 20px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .form__option {
+    padding: 20px 30px;
+    font-size: 1.6rem;
   }
 }
 .form__option--current {
@@ -3829,17 +3846,17 @@ html {
   flex-wrap: wrap;
   margin-top: 30px;
   padding-right: 20px;
-  gap: 30px;
+  gap: 20px;
 }
 @media screen and (max-width: 767.98px) {
   .modal__ctrl {
-    margin-top: 20px;
+    margin-top: 30px;
     gap: 20px;
   }
 }
 @media screen and (max-width: 575.98px) {
   .modal__ctrl {
-    margin-top: 10px;
+    margin-top: 20px;
     gap: 10px;
   }
 }
@@ -3904,7 +3921,7 @@ html {
   font-size: 1.8rem;
   font-weight: 500;
   text-align: center;
-  padding: 13px 0;
+  padding: 30px;
 }
 .modal__form-search {
   flex-shrink: 0;
@@ -3914,12 +3931,12 @@ html {
 @media screen and (max-width: 991.98px) {
   .modal__form-search {
     padding: 0 20px 0;
-    height: 42px;
+    height: 48px;
   }
 }
 @media screen and (max-width: 575.98px) {
   .modal__form-search {
-    margin: 0 20px;
+    margin: 0 30px;
     padding: 0 14px 0;
     border: 1px solid #d2d1d6;
     border-radius: 10px;
@@ -3928,6 +3945,11 @@ html {
 .modal__form-search-icon {
   width: 16px;
   object-fit: contain;
+}
+@media screen and (max-width: 991.98px) {
+  .modal__form-search-icon {
+    width: 20px;
+  }
 }
 
 .user-address__top {
