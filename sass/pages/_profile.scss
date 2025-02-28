@@ -1,0 +1,115 @@
+.profile-page {
+    padding: 30px 0 50px;
+}
+
+.profile-container {
+}
+
+.profile-sidebar {
+    padding-bottom: 30px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+
+.profile-user__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 0 20px;
+
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    background: linear-gradient(180deg, rgba(26, 22, 46, 0) 0%, #1a162e 100%),
+        url(../img/profile/profile-top-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.profile-user {
+    &__avatar-wrap {
+        width: 116px;
+        height: 116px;
+        border-radius: 50%;
+
+        overflow: hidden;
+        outline: 5px solid rgba(255, 255, 255, 0.2);
+        background-color: #ccc;
+    }
+
+    &__avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__name,
+    &__desc {
+        color: #fff;
+    }
+
+    &__name {
+        margin-top: 20px;
+
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 144.444%;
+    }
+
+    &__desc {
+        margin-top: 2px;
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__list-wrap {
+        margin: 30px 30px -5px 30px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 144.444%;
+    }
+
+    &__list {
+        margin-top: 11px;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        height: 34px;
+        padding: 0 4px;
+        border-radius: 4px;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 146.667%;
+
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #ebebeb;
+        }
+    }
+
+    &__icon-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 24px;
+    }
+
+    &__icon {
+    }
+}
