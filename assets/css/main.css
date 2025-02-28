@@ -3685,6 +3685,7 @@ html {
 }
 @media screen and (max-width: 991.98px) {
   .checkout-item__thumb-wrap {
+    margin: 0 16px;
     width: 150px;
     height: 150px;
   }
@@ -3692,7 +3693,7 @@ html {
 @media screen and (max-width: 767.98px) {
   .checkout-item__thumb-wrap {
     align-self: flex-start;
-    margin: 0 16px;
+    margin: 0 14px;
     width: 60px;
     height: 60px;
   }
@@ -3726,6 +3727,12 @@ html {
   font-weight: 500;
   line-height: 144.444%;
 }
+@media screen and (max-width: 767.98px) {
+  .checkout-item__title-link {
+    font-size: 1.5rem;
+    line-height: 142.857%;
+  }
+}
 .checkout-item__price {
   margin: 16px 0;
   color: #9e9da8;
@@ -3741,7 +3748,7 @@ html {
   align-items: center;
   gap: 20px;
 }
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 991.98px) {
   .checkout-item__ctrl-wrap {
     gap: 10px;
   }
@@ -3805,6 +3812,8 @@ html {
 @media screen and (max-width: 767.98px) {
   .checkout-item__price-total {
     text-align: left;
+    font-size: 1.8rem;
+    line-height: 144.444%;
   }
 }
 .checkout-item__ctrl-btn {
@@ -3816,14 +3825,39 @@ html {
   font-weight: 500;
   line-height: 150%;
 }
+.checkout-item__favorite-ctrl-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 991.98px) {
+  .checkout-item__favorite-ctrl-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
 .checkout-item__favorite-checkout-btn {
   min-width: 150px;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 145.455%;
 }
+@media screen and (max-width: 767.98px) {
+  .checkout-item__favorite-checkout-btn {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
+}
 .checkout-item__favorite-checkout-btn--check-all {
   min-width: 201px;
+}
+@media screen and (max-width: 767.98px) {
+  .checkout-item__favorite-checkout-btn--check-all {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 
 .modal {
@@ -4780,6 +4814,12 @@ html {
 @media screen and (max-width: 767.98px) {
   .checkout-row--bold {
     font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .checkout-row--md-block {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

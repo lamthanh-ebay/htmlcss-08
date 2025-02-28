@@ -39,13 +39,14 @@
         }
 
         @include abstracts.screen(lg) {
+            margin: 0 16px;
             width: 150px;
             height: 150px;
         }
 
         @include abstracts.screen(md) {
             align-self: flex-start;
-            margin: 0 16px;
+            margin: 0 14px;
             width: 60px;
             height: 60px;
         }
@@ -81,6 +82,11 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 144.444%;
+
+        @include abstracts.screen(md) {
+            font-size: 1.5rem;
+            line-height: 142.857%;
+        }
     }
 
     &__price {
@@ -100,7 +106,7 @@
         align-items: center;
         gap: 20px;
 
-        @include abstracts.screen(xl) {
+        @include abstracts.screen(lg) {
             gap: 10px;
         }
 
@@ -170,6 +176,9 @@
 
         @include abstracts.screen(md) {
             text-align: left;
+
+            font-size: 1.8rem;
+            line-height: 144.444%;
         }
     }
 
@@ -185,14 +194,37 @@
     }
 
     // Favorite checkout btn
+    &__favorite-ctrl-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+    }
+
     &__favorite-checkout-btn {
         min-width: 150px;
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 145.455%;
 
+        @include abstracts.screen(md) {
+            margin-top: 16px;
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+
         &--check-all {
             min-width: 201px;
+
+            @include abstracts.screen(md) {
+                width: 100%;
+                margin-top: 30px;
+            }
         }
     }
 }
