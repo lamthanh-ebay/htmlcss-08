@@ -6,7 +6,7 @@
     padding: 10px;
 
     border-radius: 10px;
-    background: #f6f6f6;
+    background: var(--profile-item-bg-color);
 
     &__icon {
         display: flex;
@@ -18,7 +18,7 @@
         height: 54px;
 
         border-radius: 8px;
-        background: #fff;
+        background: var(--profile-item-icon-bg-color);
     }
 
     &__content {

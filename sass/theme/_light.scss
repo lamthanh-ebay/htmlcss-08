@@ -102,6 +102,16 @@ html {
     --dialog-content-bg-color: #fff;
     --dialog-content-shadow-color: rgba(200, 200, 200, 0.4);
 
+    // Profile page
+    --profile-sidebar-bg-color: #fff;
+    --profile-sidebar-shadow-color: rgba(237, 237, 246, 0.2);
+    --profile-item-bg-color: #f6f6f6;
+    --profile-item-icon-bg-color: #fff;
+    --profile-user-link-hover-color: #ebebeb;
+
+    // Separate
+    --separate-bg-color: #d2d1d6;
+
     //******** Responsive ********//
     //Header
     @include abstracts.screen(lg) {
