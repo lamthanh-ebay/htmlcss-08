@@ -5467,6 +5467,11 @@ html {
 .add-new-card__form {
   margin-top: 30px;
 }
+@media screen and (max-width: 575.98px) {
+  .add-new-card__form {
+    margin-top: 16px;
+  }
+}
 .add-new-card__form-row {
   gap: 30px;
   margin-top: 30px;
@@ -5474,11 +5479,25 @@ html {
 .add-new-card__form-row > * {
   flex: 1;
 }
+@media screen and (max-width: 575.98px) {
+  .add-new-card__form-row {
+    flex-direction: column;
+    align-items: normal;
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
 .add-new-card__form-label {
   margin-bottom: 20px;
   font-size: 1.8rem;
   line-height: 144.444%;
   user-select: none;
+}
+@media screen and (max-width: 575.98px) {
+  .add-new-card__form-label {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+  }
 }
 .add-new-card__form-label--margin-small {
   margin-bottom: 10px;
@@ -5494,6 +5513,15 @@ html {
 }
 .add-new-card__form-btn--submit {
   min-width: 123px;
+}
+@media screen and (max-width: 575.98px) {
+  .add-new-card__form-btn {
+    font-size: 1.4rem;
+    flex: 1;
+  }
+  .add-new-card__form-btn--submit {
+    min-width: 50%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
