@@ -76,6 +76,12 @@
             }
         }
 
+        &__col {
+            @include abstracts.screen(lg) {
+                width: 100%;
+            }
+        }
+
         &__slider {
             --height-b-a: 22px;
 

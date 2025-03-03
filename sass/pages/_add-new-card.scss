@@ -1,0 +1,52 @@
+.add-new-card {
+    &__top {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__icon {
+        width: 30px;
+        vertical-align: bottom;
+    }
+
+    &__form {
+        margin-top: 30px;
+    }
+
+    &__form-row {
+        gap: 30px;
+        margin-top: 30px;
+
+        & > * {
+            flex: 1;
+        }
+    }
+
+    &__form-label {
+        margin-bottom: 20px;
+
+        font-size: 1.8rem;
+        line-height: 144.444%;
+        user-select: none;
+
+        &--margin-small {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__form-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__form-btn {
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        &--submit {
+            min-width: 123px;
+        }
+    }
+}

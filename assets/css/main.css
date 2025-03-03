@@ -2870,6 +2870,11 @@ html {
     padding: 0 30px 40px;
   }
 }
+@media screen and (max-width: 991.98px) {
+  .filter-form__col {
+    width: 100%;
+  }
+}
 .filter-form__slider {
   --height-b-a: 22px;
   position: relative;
@@ -5448,6 +5453,47 @@ html {
   .favorite-item__btn {
     min-width: 120px;
   }
+}
+
+.add-new-card__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.add-new-card__icon {
+  width: 30px;
+  vertical-align: bottom;
+}
+.add-new-card__form {
+  margin-top: 30px;
+}
+.add-new-card__form-row {
+  gap: 30px;
+  margin-top: 30px;
+}
+.add-new-card__form-row > * {
+  flex: 1;
+}
+.add-new-card__form-label {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  line-height: 144.444%;
+  user-select: none;
+}
+.add-new-card__form-label--margin-small {
+  margin-bottom: 10px;
+}
+.add-new-card__form-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.add-new-card__form-btn {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.add-new-card__form-btn--submit {
+  min-width: 123px;
 }
 
 /*# sourceMappingURL=main.css.map */
