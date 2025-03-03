@@ -221,3 +221,25 @@ window.addEventListener("template-loaded", () => {
         });
     });
 });
+
+// Bật tắt Dark mode
+// Cách dùng:
+// 1. Dán id="switch-theme-btn" vào nút Dark mode
+// 2. Bọc nội dung của nút Dark mode trong thẻ Span: <span>Dark mode</span>
+
+window.addEventListener("template-loaded", () => {
+    const switchBtn = document.querySelector("#switch-theme-btn");
+    if (switchBtn) {
+        switchBtn.onclick = function () {
+            const isDark = localStorage.dark === "true";
+            document.querySelector("html").classList.toggle("dark", !isDark);
+            localStorage.setItem("dark", !isDark);
+            switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
+        };
+        const isDark = localStorage.dark === "true";
+        switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
+    }
+});
+
+const isDark = localStorage.dark === "true";
+document.querySelector("html").classList.toggle("dark", isDark);
